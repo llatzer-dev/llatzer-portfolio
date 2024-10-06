@@ -1,27 +1,55 @@
-# LlatzerPortfolio
+# Llatzer's Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
+Welcome to **Llatzer's Portfolio**, where I showcase my journey as a developer and my professional growth in web development, particularly focusing on **Angular** and **Java**. This portfolio is a collection of my projects, technical articles, and contributions, aimed at sharing my knowledge and skills with the community.
 
-## Development server
+## About Me
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+I am Llatzer, a proactive and organized developer specializing in **Angular** and **Java** with a background in Multiplatform Application Development. My passion for learning and teamwork drives me to continuously improve and share insights with others.
 
-## Code scaffolding
+I have experience building robust and scalable applications, focusing on state management, frontend architectures, and optimizing performance. My work reflects my commitment to writing clean, maintainable code and following best practices in development.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Skills
 
-## Build
+- **Frontend**: Angular, HTML, CSS, TypeScript, JavaScript
+- **Backend**: Java, Spring, REST APIs
+- **State Management**: NgRx, SignalStore
+- **Version Control**: Git, GitHub
+- **Others**: RxJS, Unit Testing, Agile Methodologies
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Projects
 
-## Running unit tests
+Here are some of the notable projects I've worked on:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 1. **Angular E-commerce App**
 
-## Running end-to-end tests
+- A full-featured e-commerce web application built with **Angular**, using **NgRx** for state management and **SignalStore** for improved performance.
+- [Repository Link](#)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### 2. **Java Spring Boot API**
 
-## Further help
+- Backend API built with **Java** and **Spring Boot**. This project demonstrates my ability to design scalable and secure RESTful services.
+- [Repository Link](#)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### 3. **Real-time Chat Application**
+
+- A real-time chat application developed using **Angular** and **Firebase**, demonstrating the integration of real-time data services with modern frontend frameworks.
+- [Repository Link](#)
+
+## Articles
+
+I also write technical articles to share my experience and knowledge in the field of web development. Here are some of the topics I've covered:
+
+1. **State Management in Angular Using NgRx SignalStore**
+2. **Optimizing Frontend Applications with Single Source of Truth**
+3. **Error Handling in TypeScript: Best Practices with Fetch API and Promises**
+
+You can find these articles on [LinkedIn](#) or on my [personal blog](#).
+
+## Contact
+
+Feel free to reach out if you'd like to collaborate or discuss any of my projects.
+
+- **LinkedIn**: [Llatzer's LinkedIn](#)
+- **Email**: llatzer@example.com
+
+Thank you for visiting my portfolio!
