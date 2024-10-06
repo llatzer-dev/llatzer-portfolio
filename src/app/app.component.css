@@ -1,0 +1,7 @@
+.h1-under-construction {
+  @apply text-5xl font-bold underline mx-auto;
+}
+
+.container-under-construction {
+  @apply flex items-center h-screen bg-bungee-shade;
+}
