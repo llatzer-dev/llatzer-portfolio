@@ -53,3 +53,26 @@ Feel free to reach out if you'd like to collaborate or discuss any of my project
 - **Email**: llatzer@example.com
 
 Thank you for visiting my portfolio!
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/llatzer-dev/llatzer-portfolio
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd llatzer-portfolio
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+
+## Usage
+
+To start the application in development mode, run:
+
+```bash
+ng serve
+```
