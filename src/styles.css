@@ -4,5 +4,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-[#C89D1A];
+  @apply bg-[#222];
 }
+
+/* #C89D1A  #172837 */
