@@ -43,14 +43,14 @@ I also write technical articles to share my experience and knowledge in the fiel
 2. **Optimizing Frontend Applications with Single Source of Truth**
 3. **Error Handling in TypeScript: Best Practices with Fetch API and Promises**
 
-You can find these articles on [LinkedIn](#) or on my [personal blog](#).
+You can find these articles on [LinkedIn](https://www.linkedin.com/in/lazaro-ortega-boix/) or on my [personal blog](#).
 
 ## Contact
 
 Feel free to reach out if you'd like to collaborate or discuss any of my projects.
 
-- **LinkedIn**: [Llatzer's LinkedIn](#)
-- **Email**: llatzer@example.com
+- **LinkedIn**: [Llatzer's LinkedIn](https://www.linkedin.com/in/lazaro-ortega-boix/)
+- **Email**: lazaro.ortega.boix@gmail.com
 
 Thank you for visiting my portfolio!
 
@@ -76,3 +76,7 @@ To start the application in development mode, run:
 ```bash
 ng serve
 ```
+
+## SVG Resources
+
+All the SVG files in this repository are sourced from [SVGRepo](https://www.svgrepo.com/vectors/github/outlined/). You are free to use and extract any of these assets as they are available at no cost. Enjoy!
