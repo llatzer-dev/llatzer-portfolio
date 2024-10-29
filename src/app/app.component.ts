@@ -3,11 +3,18 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeroComponent } from './components/hero/hero.component';
+import { KnowMoreComponent } from './components/know-more/know-more.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgOptimizedImage, NavbarComponent, HeroComponent],
+  imports: [
+    RouterOutlet,
+    NgOptimizedImage,
+    NavbarComponent,
+    HeroComponent,
+    KnowMoreComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
