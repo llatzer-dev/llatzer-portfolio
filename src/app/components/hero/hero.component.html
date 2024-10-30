@@ -7,13 +7,15 @@
     <h3 class="text-xl text-gray-600 w-96">
       Specialized in <span class="font-semibold">Angular</span> and <span class="font-semibold">Java</span>, from
       Alicante, Spain ES.
-      <a href="#more-info" role="button"
-        class="items-center text-white rounded-lg transition-transform duration-300 hover:scale-105 inline-flex"
+      <a href="#more-info" role="button" class="items-center inline-flex text-white rounded-lg group relative"
         aria-label="Learn more about Lazaro Ortega">
         More about me
-        <img src="arrow.svg" alt="Arrow Icon" class="h-5 w-5 ml-2">
-        <!-- TODO En el arrow quitar el hover scale y hacer una transición de opacity movimiento -->
+        <img src="arrow-up.svg" alt="Arrow Icon"
+          class="h-6 w-6 opacity-40 transition duration-200 transform group-hover:opacity-100 group-hover:translate-x-1">
+        <span
+          class="absolute bottom-0 left-0 w-full border-b border-dashed border-white opacity-0 group-hover:opacity-100 transition duration-300"></span>
       </a>
+
     </h3>
     <div class="mt-6 flex space-x-4">
       <a href="mailto:lazaro.ortega.boix@gmail.com"
