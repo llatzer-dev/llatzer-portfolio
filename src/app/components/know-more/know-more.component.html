@@ -11,28 +11,36 @@
       Career
     </h3>
     <div
-      class="flex items-center justify-between px-4 py-2 mb-2 rounded-xl hover:bg-[#222] hover:bg-opacity-15 transition duration-300">
+      class="flex items-center justify-between px-4 py-2 mb-2 rounded-xl hover:bg-[#222] hover:bg-opacity-15 transition duration-300 group">
       <div class="flex flex-col">
-        <div class="text-lg text-[#323232] font-bold ">Junior Developer</div>
-        <div class="text-lg text-[#323232] font-bold opacity-55">Company</div>
+        <div
+          class="text-lg text-[#323232] font-bold transition-transform duration-200 transform group-hover:translate-x-1">
+          Junior Developer</div>
+        <div
+          class="text-lg text-[#323232] font-bold opacity-55 transition-transform duration-200 transform group-hover:translate-x-1">
+          Company</div>
       </div>
       <div class="flex-grow mx-4 border-b border-[#323232]"></div>
       <div class="flex flex-col text-right">
-        <div class="text-lg  text-[#323232] font-semibold">Alicante, Spain</div>
-        <div class="text-lg  text-[#323232] font-semibold opacity-55">2022-2024</div>
+        <div class="text-lg text-[#323232] font-semibold">Alicante, Spain</div>
+        <div class="text-lg text-[#323232] font-semibold opacity-55">2022-2024</div>
       </div>
     </div>
 
     <div
-      class="flex items-center justify-between px-4 py-2 mb-2 rounded-xl hover:bg-[#000] hover:bg-opacity-15 transition duration-300">
+      class="flex items-center justify-between px-4 py-2 mb-2 rounded-xl hover:bg-[#000] hover:bg-opacity-15 transition duration-300 group ">
       <div class="flex flex-col">
-        <div class="text-lg text-[#323232] font-bold ">Position</div>
-        <div class="text-lg text-[#323232] font-bold opacity-55">Company</div>
+        <div
+          class="text-lg text-[#323232] font-bold transition-transform duration-200 transform group-hover:translate-x-1">
+          Position</div>
+        <div
+          class="text-lg text-[#323232] font-bold opacity-55 transition-transform duration-200 transform group-hover:translate-x-1">
+          Company</div>
       </div>
       <div class="flex-grow mx-4 border-b border-[#323232]"></div>
       <div class="flex flex-col text-right">
-        <div class="text-lg  text-[#323232] font-semibold">Alicante, Spain</div>
-        <div class="text-lg  text-[#323232] font-semibold opacity-55">20XX-20XX</div>
+        <div class="text-lg text-[#323232] font-semibold">Alicante, Spain</div>
+        <div class="text-lg text-[#323232] font-semibold opacity-55">20XX-20XX</div>
       </div>
     </div>
 
@@ -42,29 +50,36 @@
       <img src="arrow-right.svg" alt="Arrow Right Icon"
         class="h-5 w-5 ml-1 transition-transform duration-200 transform group-hover:translate-x-1 group-hover:ml-1.5">
     </button>
-
   </article>
 
-  <article class="text-left mb-4 border border-[#222] rounded-xl p-4">
-    <h3 class="text-2xl font-semibold">Skills</h3>
-    <p>Your skills details go here.</p>
+  <div class="flex justify-between mb-4">
+    <article class="text-left border border-[#222] rounded-xl p-4 w-1/2 mr-2">
+      <h3 class="text-2xl font-semibold">Skills</h3>
+      <p>Your skills details go here.</p>
 
-    <div class="scroller" data-direction="left" data-speed="fast">
-      <ul class="tag-list scroller__inner">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JS</li>
-        <li>SSG</li>
-        <li>webdev</li>
-        <li>animation</li>
-        <li>UI/UX</li>
-      </ul>
-    </div>
+      <div class="scroller" data-direction="left" data-speed="fast">
+        <ul class="tag-list scroller__inner">
+          <li class="px-4 py-2 border border-[#222] rounded-2xl transition duration-300">
+            HTML</li>
+          <li class="px-4 py-2 border border-[#222] rounded-2xl transition duration-300">
+            CSS</li>
+          <li class="px-4 py-2 border border-[#222] rounded-2xl transition duration-300">
+            JS</li>
+          <li class="px-4 py-2 border border-[#222] rounded-2xl transition duration-300">
+            SSG</li>
+          <li class="px-4 py-2 border border-[#222] rounded-2xl transition duration-300">
+            webdev</li>
+          <li class="px-4 py-2 border border-[#222] rounded-2xl transition duration-300">
+            animation</li>
+          <li class="px-4 py-2 border border-[#222] rounded-2xl transition duration-300">
+            UI/UX</li>
+        </ul>
+      </div>
+    </article>
 
-  </article>
-
-  <article class="text-left mb-4 border border-[#222] rounded-xl p-4">
-    <h3 class="text-2xl font-semibold">Stack</h3>
-    <p>Your tech stack details go here.</p>
-  </article>
+    <article class="text-left border border-[#222] rounded-xl p-4 w-1/2 ml-2">
+      <h3 class="text-2xl font-semibold">Stack</h3>
+      <p>Your tech stack details go here.</p>
+    </article>
+  </div>
 </section>

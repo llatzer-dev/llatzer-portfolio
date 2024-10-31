@@ -1,4 +1,5 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, inject } from '@angular/core';
+import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
 
 @Component({
   selector: 'app-know-more',
@@ -8,13 +9,17 @@ import { AfterViewInit, Component } from '@angular/core';
   styleUrls: ['./know-more.component.css'],
 })
 export class KnowMoreComponent implements AfterViewInit {
-  ngAfterViewInit() {
-    const scrollers = document.querySelectorAll('.scroller');
+  checkPlatform = inject(CheckPlatformUtility);
 
-    // If a user hasn't opted in for reduced motion, then we add the animation
-    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      this.addAnimation(scrollers);
-      this.addHoverListeners(scrollers); // Call the function to add listeners
+  ngAfterViewInit() {
+    if (this.checkPlatform.checkIfBrowser()) {
+      const scrollers = document.querySelectorAll('.scroller');
+
+      // If a user hasn't opted in for reduced motion, then we add the animation
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        this.addAnimation(scrollers);
+        this.addHoverListeners(scrollers); // Call the function to add listeners
+      }
     }
   }
 
