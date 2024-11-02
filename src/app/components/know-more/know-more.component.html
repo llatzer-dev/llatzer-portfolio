@@ -1,13 +1,13 @@
 <section id="knowmore" role="region" class="mt-4 bg-bungee-shade p-12 rounded-xl text-center">
   <h2 class="text-4xl font-bold mb-4 inline-flex items-center justify-center px-4 py-2 text-[#222]">
-    <img src="books.svg" alt="Icono de libros" class="w-8 h-8 mr-2">
+    <img src="library-lucide.svg" alt="Books Icon" class="w-8 h-8 mr-2">
     Know More
     <span class="text-white ml-2">.</span>
   </h2>
 
-  <article class="text-left mb-4 border border-[#222] rounded-xl p-4">
-    <h3 class="text-2xl font-semibold flex items-center mb-4">
-      <img src="briefcase.svg" alt="Career Icon" class="h-5 w-5 mr-2">
+  <article class="text-left mb-6 border border-[#222] rounded-xl p-6">
+    <h3 class="text-2xl font-bold flex items-center mb-4">
+      <img src="briefcase-lucide.svg" alt="Career Icon" class="h-5 w-5 mr-2">
       Career
     </h3>
     <div
@@ -47,39 +47,52 @@
     <button class="flex items-center justify-center w-full py-2 mt-4 font-semibold text-white bg-[#222] rounded-lg
              transition-colors duration-300 ease-in-out hover:bg-opacity-65 group">
       See full work experience
-      <img src="arrow-right.svg" alt="Arrow Right Icon"
+      <img src="arrow-right-lucide.svg" alt="Arrow Right Icon"
         class="h-5 w-5 ml-1 transition-transform duration-200 transform group-hover:translate-x-1 group-hover:ml-1.5">
     </button>
   </article>
 
-  <div class="flex justify-between mb-4">
-    <article class="text-left border border-[#222] rounded-xl p-4 w-1/2 mr-2">
-      <h3 class="text-2xl font-semibold">Skills</h3>
-      <p>Your skills details go here.</p>
+  <div class="flex mb-4 gap-6 overflow-hidden h-68">
+    <article class="text-left border border-[#222] rounded-xl p-6 w-1/2">
+      <h3 class="text-2xl font-bold flex items-center mb-4">
+        <img src="dumbbell-lucide.svg" alt="Career Icon" class="h-5 w-5 mr-2">
+        Skills
+      </h3>
 
-      <div class="scroller" data-direction="left" data-speed="fast">
+      @for (skillCategory of skillsCategories; track $index) {
+      <div class="scroller" [attr.data-direction]="skillCategory.direction" [attr.data-speed]="skillCategory.speed">
         <ul class="tag-list scroller__inner">
-          <li class="px-4 py-2 border border-[#222] rounded-2xl transition duration-300">
-            HTML</li>
-          <li class="px-4 py-2 border border-[#222] rounded-2xl transition duration-300">
-            CSS</li>
-          <li class="px-4 py-2 border border-[#222] rounded-2xl transition duration-300">
-            JS</li>
-          <li class="px-4 py-2 border border-[#222] rounded-2xl transition duration-300">
-            SSG</li>
-          <li class="px-4 py-2 border border-[#222] rounded-2xl transition duration-300">
-            webdev</li>
-          <li class="px-4 py-2 border border-[#222] rounded-2xl transition duration-300">
-            animation</li>
-          <li class="px-4 py-2 border border-[#222] rounded-2xl transition duration-300">
-            UI/UX</li>
+          @for (skill of skillCategory.skills; track $index) {
+          <li class="px-4 py-2 border border-[#222] rounded-2xl transition duration-300">{{skill.skillName}}</li>
+          }
         </ul>
+      </div>
+      }
+
+    </article>
+
+    <article class="p-6 border border-[#222] rounded-lg w-1/2">
+      <h3 class="text-2xl font-bold flex items-center mb-6">
+        <img src="layers-lucide.svg" alt="Career Icon" class="h-5 w-5 mr-2">
+        Stack
+      </h3>
+
+      <div class="dark-scroll overflow-y-auto h-[calc(100%-3rem)]">
+        @for (stack of stacks; track $index) {
+        @if (stack.show) {
+        <section class="flex items-center border border-[#444] rounded-xl p-2 mb-2">
+          <img [src]="stack.image" [alt]="stack.name + ' Icon'" class="h-full w-12 mr-4 max-h-12">
+          <div class="text-left">
+            <h3 class="text-lg font-semibold flex items-center text-[#222]">
+              {{stack.name}}
+            </h3>
+            <p class="text-sm font-semibold text-[#222] opacity-70">{{stack.stackCategory}}</p>
+          </div>
+        </section>
+        }
+        }
       </div>
     </article>
 
-    <article class="text-left border border-[#222] rounded-xl p-4 w-1/2 ml-2">
-      <h3 class="text-2xl font-semibold">Stack</h3>
-      <p>Your tech stack details go here.</p>
-    </article>
   </div>
 </section>
