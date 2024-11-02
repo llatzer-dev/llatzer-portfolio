@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from '@app/components/navbar/navbar.component';
 import { HeroComponent } from '@app/components/hero/hero.component';
 import { KnowMoreComponent } from '@app/components/know-more/know-more.component';
+import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ import { KnowMoreComponent } from '@app/components/know-more/know-more.component
     NavbarComponent,
     HeroComponent,
     KnowMoreComponent,
+    TestimonialsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
