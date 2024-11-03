@@ -7,6 +7,7 @@ import { KnowMoreComponent } from '@app/components/know-more/know-more.component
 import { TestimonialsComponent } from '@app/components/testimonials/testimonials.component';
 import { BlogComponent } from '@app/components/blog/blog.component';
 import { LetstalkComponent } from './components/letstalk/letstalk.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,7 @@ import { LetstalkComponent } from './components/letstalk/letstalk.component';
     TestimonialsComponent,
     BlogComponent,
     LetstalkComponent,
+    MenuComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

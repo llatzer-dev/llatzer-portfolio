@@ -1,0 +1,93 @@
+@keyframes bounceToPosition {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* Comienza desplazado hacia abajo */
+  }
+  30% {
+    transform: translateY(-15px); /* Rebote hacia arriba */
+  }
+  50% {
+    transform: translateY(5px); /* Rebote hacia abajo */
+  }
+  60% {
+    transform: translateY(-5px); /* Rebote más pequeño hacia arriba */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Vuelve a la posición final */
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 1;
+    transform: translateY(0); /* Posición inicial */
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(30px); /* Se desplaza hacia abajo */
+  }
+}
+
+@keyframes slideup {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* Posición inicial */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Se desplaza hacia abajo */
+  }
+}
+
+.floating-bar-wrapper {
+  @apply z-10 fixed bottom-[3%] left-0 right-0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.floating-bar-wrapper.visible {
+  opacity: 1;
+  animation: slideup 0.5s cubic-bezier(0.5, 1.7, 0.3, 1) forwards;
+}
+
+.floating-bar-wrapper.novisible {
+  animation: slideDown 0.5s ease forwards;
+}
+
+.center-dynamic-bar {
+  @apply flex justify-center w-full;
+}
+
+.dynamic-bar {
+  @apply bg-white rounded-lg flex justify-center items-center p-2;
+}
+
+.dynamic-bar-avatar {
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+}
+
+.dynamic-item {
+  @apply border border-black text-black rounded-md ml-2 p-1.5 flex overflow-hidden;
+}
+
+._24px {
+  @apply w-6 min-w-6 h-6 min-h-6;
+}
+
+.icon-solid {
+  @apply flex justify-center items-center;
+}
+
+.button {
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-weight: 500;
+  display: flex;
+  margin-left: 8px;
+  background-color: #000;
+  color: #000;
+}
