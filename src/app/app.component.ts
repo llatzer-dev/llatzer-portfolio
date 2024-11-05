@@ -28,4 +28,6 @@ import { MenuComponent } from './components/menu/menu.component';
 })
 export class AppComponent {
   title = 'llatzer-portfolio';
+
+  public oldHero: boolean = false;
 }
