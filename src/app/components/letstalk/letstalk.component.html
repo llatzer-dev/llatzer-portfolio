@@ -6,52 +6,19 @@
 
   <div class="flex flex-wrap gap-6 justify-center">
     <ul class="gap-4 grid grid-cols-1 md:grid-cols-2 w-full">
+      @for (social of socials; track $index) {
       <li class="flex flex-col w-full">
-        <a href="https://github.com/llatzer-dev" target="_blank"
-          class="focus:ring-4 focus:ring-bungee-shade rounded-lg transition" aria-label="GitHub Profile">
+        <a [href]="social.socialLink" target="_blank"
+          class="focus:ring-4 focus:ring-bungee-shade rounded-lg transition">
           <div
             class="flex items-center gap-2 justify-center w-full py-3 font-semibold text-white bg-[#222] rounded-lg shadow-md transition-all duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-lg">
-            <img src="lucide/github-lucide.svg" alt="GitHub Icon"
+            <img [src]="social.socialIcon" [alt]="social.socialName + 'Icon'"
               class="h-5 w-5 ml-1 transition-transform duration-200">
-            GitHub
+            {{social.socialName}}
           </div>
         </a>
       </li>
-
-      <li class="flex flex-col w-full">
-        <a href="https://www.linkedin.com/in/lazaro-ortega/" target="_blank"
-          class="focus:ring-4 focus:ring-bungee-shade rounded-lg transition" aria-label="LinkedIn Profile">
-          <div
-            class="flex items-center gap-2 justify-center w-full py-3 font-semibold text-white bg-[#222] rounded-lg shadow-md transition-all duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-lg">
-            <img src="lucide/linkedin-lucide.svg" alt="LinkedIn Icon"
-              class="h-5 w-5 ml-1 transition-transform duration-200">
-            LinkedIn
-          </div>
-        </a>
-      </li>
-
-      <li class="flex flex-col w-full">
-        <a href="mailto:lazaro.ortega.boix@gmail.com" class="focus:ring-4 focus:ring-bungee-shade rounded-lg transition"
-          aria-label="Send Email">
-          <div
-            class="flex items-center gap-2 justify-center w-full py-3 font-semibold text-white bg-[#222] rounded-lg shadow-md transition-all duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-lg">
-            <img src="lucide/mail-lucide.svg" alt="Email Icon" class="h-5 w-5 ml-1 transition-transform duration-200">
-            Email
-          </div>
-        </a>
-      </li>
-
-      <li class="flex flex-col w-full">
-        <a href="https://x.com/llatzerdev" target="_blank"
-          class="focus:ring-4 focus:ring-bungee-shade rounded-lg transition" aria-label="Twitter Profile">
-          <div
-            class="flex items-center gap-2 justify-center w-full py-3 font-semibold text-white bg-[#222] rounded-lg shadow-md transition-all duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-lg">
-            <img src="lucide/twitter-lucide.svg" alt="Twitter Icon"
-              class="h-5 w-5 ml-1 transition-transform duration-200">
-            Twitter
-          </div>
-        </a>
-      </li>
+      }
     </ul>
   </div>
 </section>

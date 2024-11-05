@@ -11,43 +11,26 @@
       Career
     </h3>
 
+    @for (career of careers; track $index) {
     <div
       class="flex items-center justify-between px-4 py-2 mb-2 rounded-xl hover:bg-[#222] hover:bg-opacity-15 transition duration-300 group">
       <div class="flex flex-col">
         <div
           class="text-sm md:text-lg text-[#323232] font-bold transition-transform duration-200 transform group-hover:translate-x-1">
-          Junior Developer
+          {{career.position}}
         </div>
         <div
           class="text-sm md:text-lg text-[#323232] font-bold opacity-55 transition-transform duration-200 transform group-hover:translate-x-1">
-          Company
+          {{career.company}}
         </div>
       </div>
       <div class="flex-grow mx-4 border-b border-[#323232] hidden md:block"></div>
       <div class="flex flex-col text-right">
-        <div class="text-sm md:text-lg text-[#323232] font-semibold">Alicante, Spain</div>
-        <div class="text-sm md:text-lg text-[#323232] font-semibold opacity-55">2022-2024</div>
+        <div class="text-sm md:text-lg text-[#323232] font-semibold">{{career.location}}</div>
+        <div class="text-sm md:text-lg text-[#323232] font-semibold opacity-55">{{career.time}}</div>
       </div>
     </div>
-
-    <div
-      class="flex items-center justify-between px-4 py-2 mb-2 rounded-xl hover:bg-[#000] hover:bg-opacity-15 transition duration-300 group">
-      <div class="flex flex-col">
-        <div
-          class="text-sm md:text-lg text-[#323232] font-bold transition-transform duration-200 transform group-hover:translate-x-1">
-          Position
-        </div>
-        <div
-          class="text-sm md:text-lg text-[#323232] font-bold opacity-55 transition-transform duration-200 transform group-hover:translate-x-1">
-          Company
-        </div>
-      </div>
-      <div class="flex-grow mx-4 border-b border-[#323232] hidden md:block"></div>
-      <div class="flex flex-col text-right">
-        <div class="text-sm md:text-lg text-[#323232] font-semibold">Alicante, Spain</div>
-        <div class="text-sm md:text-lg text-[#323232] font-semibold opacity-55">20XX-20XX</div>
-      </div>
-    </div>
+    }
 
     <button
       class="flex items-center justify-center w-full py-2 mt-4 font-semibold text-white bg-[#222] rounded-lg transition-colors duration-300 ease-in-out hover:bg-opacity-65 group">

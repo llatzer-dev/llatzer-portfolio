@@ -1,4 +1,4 @@
-<section id="blog" class="mt-4 bg-[#FFBE28] p-6 md:p-12 rounded-xl">
+<section id="blog" class="mt-4 bg-bungee-shade p-6 md:p-12 rounded-xl">
   <h2 class="text-4xl font-bold text-[#222] flex items-center justify-center mb-4 px-4 py-2">
     <img src="lucide/notepad-text-lucide.svg" alt="Blog Icon" class="w-8 h-8 mr-2">
     <span class="text-center">Blog</span>
@@ -7,68 +7,22 @@
 
   <div class="flex flex-wrap gap-6 justify-center">
     <ul class="gap-4 grid grid-cols-1 md:grid-cols-2">
+      @for (blog of blogs; track $index) {
       <li class="flex w-full flex-col">
-        <a href="/en/posts/production-ready-vps-deployments">
+        <a href="{{blog.link}}">
           <div
             class="flex py-4 px-4 flex-col gap-2 border border-black rounded-md hover:shadow transition-shadow ease-in-out duration-300">
-            <span class="text-zinc-800 text-lg"><strong>Production-Ready Deployments to VPS</strong></span>
-            <span>How to set up a VPS for deploying applications in production.</span>
+            <span class="text-zinc-800 text-lg"><strong>{{blog.name}}</strong></span>
+            <span>{{blog.resume}}</span>
             <div class="flex items-center w-full gap-2 flex-wrap">
-              <span class="text-sm px-2 py-1 border rounded-md bg-slate-200">VPS</span>
-              <span class="text-sm px-2 py-1 border rounded-md bg-slate-200">Docker</span>
-              <span class="text-sm px-2 py-1 border rounded-md bg-slate-200">Github Actions</span>
-              <span class="text-sm px-2 py-1 border rounded-md bg-slate-200">CI/CD</span>
+              @for (tag of blog.tags; track $index) {
+              <span class="text-sm px-2 py-1 border rounded-md bg-slate-200">{{tag}}</span>
+              }
             </div>
           </div>
         </a>
       </li>
-
-      <li class="flex w-full flex-col">
-        <a href="/en/posts/og-images-with-astro-and-i18n">
-          <div
-            class="flex py-4 px-4 flex-col gap-2 border border-black rounded-md hover:shadow transition-shadow ease-in-out duration-300">
-            <span class="text-zinc-800 text-lg"><strong>OpenGraph images with Astro and i18n</strong></span>
-            <span>We configure OpenGraph images in Astro to adapt to the different languages of our website.</span>
-            <div class="flex items-center w-full gap-2 flex-wrap">
-              <span class="text-sm px-2 py-1 border rounded-md bg-slate-200">Astro</span>
-              <span class="text-sm px-2 py-1 border rounded-md bg-slate-200">og-images</span>
-              <span class="text-sm px-2 py-1 border rounded-md bg-slate-200">i18n</span>
-            </div>
-          </div>
-        </a>
-      </li>
-
-      <li class="flex w-full flex-col">
-        <a href="/en/posts/deploy-docker-containers-in-vps-with-github-actions">
-          <div
-            class="flex py-4 px-4 flex-col gap-2 border border-black rounded-md hover:shadow transition-shadow ease-in-out duration-300">
-            <span class="text-zinc-800 text-lg"><strong>Deploy Docker containers in VPS with GitHub
-                Actions</strong></span>
-            <span>How to make a CI/CD pipeline to deploy Docker containers in a VPS with GitHub Actions</span>
-            <div class="flex items-center w-full gap-2 flex-wrap">
-              <span class="text-sm px-2 py-1 border rounded-md bg-slate-200">VPS</span>
-              <span class="text-sm px-2 py-1 border rounded-md bg-slate-200">Docker</span>
-              <span class="text-sm px-2 py-1 border rounded-md bg-slate-200">GitHub Actions</span>
-              <span class="text-sm px-2 py-1 border rounded-md bg-slate-200">CI/CD</span>
-            </div>
-          </div>
-        </a>
-      </li>
-
-      <li class="flex w-full flex-col">
-        <a href="/en/posts/you-shouldnt-use-create-react-app">
-          <div
-            class="flex py-4 px-4 flex-col gap-2 border border-black rounded-md hover:shadow transition-shadow ease-in-out duration-300">
-            <span class="text-zinc-800 text-lg"><strong>You shouldn’t use Create React App</strong></span>
-            <span>This is a post I made about why you should not use Create React App a couple of years ago. I still
-              stand by this post today.</span>
-            <div class="flex items-center w-full gap-2 flex-wrap">
-              <span class="text-sm px-2 py-1 border rounded-md bg-slate-200">React</span>
-              <span class="text-sm px-2 py-1 border rounded-md bg-slate-200">create-react-app</span>
-            </div>
-          </div>
-        </a>
-      </li>
+      }
     </ul>
 
     <button class="flex items-center justify-center w-full py-2 font-semibold text-white bg-[#222] rounded-lg

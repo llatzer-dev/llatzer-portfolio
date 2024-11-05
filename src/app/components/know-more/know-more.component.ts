@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, inject } from '@angular/core';
 import { DIRECTION, SPEED } from '@app/models/enums';
-import { SkillCategory, Stack } from '@app/models/interfaces';
+import { Career, SkillCategory, Stack } from '@app/models/interfaces';
 import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
 
 @Component({
@@ -104,6 +104,23 @@ export class KnowMoreComponent implements AfterViewInit {
       image: 'jenkins.svg',
       name: 'Jenkins',
       stackCategory: 'CI/CD',
+    },
+  ];
+
+  public careers: Career[] = [
+    {
+      id: 1,
+      position: 'Junior Developer',
+      company: 'NTTData',
+      location: 'Alicante',
+      time: '2022-2024',
+    },
+    {
+      id: 2,
+      position: 'Internship Student',
+      company: 'NTTData',
+      location: 'Alicante',
+      time: '2022-2022',
     },
   ];
 

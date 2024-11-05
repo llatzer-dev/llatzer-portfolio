@@ -19,3 +19,37 @@ export interface Stack {
   name: string;
   stackCategory: string;
 }
+
+export interface Social {
+  id: number;
+  socialName: string;
+  socialLink: string;
+  socialIcon: string;
+}
+
+export interface Career {
+  id: number;
+  position: string;
+  company: string;
+  location: string;
+  time: string;
+}
+
+export interface Testimonial {
+  id: number;
+  companyName: string;
+  companyIcon: string;
+  companyBackground: string;
+  testimonialName: string;
+  testimonialPosition: string;
+  testimonialFile: string;
+  testimonialText: string;
+}
+
+export interface Blog {
+  id: number;
+  name: string;
+  resume: string;
+  tags: string[];
+  link: string;
+}
