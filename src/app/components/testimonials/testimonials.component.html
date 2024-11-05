@@ -1,8 +1,9 @@
-<section id="testimonials" class="mt-4 bg-bungee-shade p-6 md:p-12 rounded-xl text-center">
-  <h2 class="text-lg md:text-4xl font-bold inline-flex items-center justify-center mb-8 text-[#222]">
-    <img src="lucide/sparkle-lucide.svg" alt="Recommendation Letters Icon" class="w-6 h-6 mr-2">
+@if(testimonials.length > 0){
+<section id="testimonials" class="mt-4 p-6 md:p-12 rounded-xl text-center">
+  <h2 class="text-lg md:text-4xl font-bold inline-flex items-center justify-center mb-8 text-secondary-white">
+    <img src="lucide/bungee-shade/sparkle-lucide.svg" alt="Recommendation Letters Icon" class="w-6 h-6 mr-2">
     Recommendation Letters
-    <span class="text-lg md:text-4xl text-white ml-2">.</span>
+    <span class="text-bungee-shade text-lg md:text-4xl ml-2">.</span>
   </h2>
 
   <div class="flex flex-col md:flex-row justify-center gap-10">
@@ -12,17 +13,17 @@
         <div>
           <img [src]="testimonial.companyIcon" [alt]="testimonial.companyName + 'Logo'"
             class="w-16 h-16 rounded-full mb-2 bg-[{{testimonial.companyBackground}}] object-contain">
-          <p class="text-sm text-gray-400">{{testimonial.companyName}}</p>
+          <p class="text-sm text-primary-white opacity-55">{{testimonial.companyName}}</p>
         </div>
         <div class="text-left">
-          <p class="font-bold">{{testimonial.testimonialName}}</p>
-          <p class="text-gray-500">{{testimonial.testimonialPosition}}</p>
+          <p class="text-primary-white font-bold">{{testimonial.testimonialName}}</p>
+          <p class="text-primary-white opacity-55">{{testimonial.testimonialPosition}}</p>
         </div>
       </div>
-      <p class="text-gray-700 mb-4 text-left">"{{testimonial.testimonialText}}"</p>
+      <p class="text-primary-white mb-4 text-left">"{{testimonial.testimonialText}}"</p>
       <a [href]="testimonial.testimonialFile"
-        class="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-xl hover:bg-blue-600" download
-        aria-label="Download Recommendation Letter">
+        class="inline-flex items-center px-4 py-2 text-white bg-secondary-black hover:bg-tertiary-black rounded-xl transition-all duration-300 ease-in-out"
+        download aria-label="Download Recommendation Letter">
         <img src="lucide/download-lucide.svg" alt="Download Icon" class="h-5 w-5 mr-1">
         Download
       </a>
@@ -31,3 +32,4 @@
   </div>
 
 </section>
+}
