@@ -12,34 +12,17 @@ export class BlogComponent {
   public blogs: Blog[] = [
     {
       id: 1,
-      name: 'Production-Ready Deployments to VPS',
-      resume: 'How to set up a VPS for deploying applications in production.',
-      tags: ['VPS', 'Docker', 'Github Actions', 'CI/CD'],
-      link: 'link',
+      name: 'Optimizing state handling in frontend applications',
+      resume: 'The use of the Store as Single Source Of Truth',
+      tags: ['Frontend', 'Angular', 'NgRx', 'SSOT'],
+      link: 'https://www.linkedin.com/pulse/angular-18-ngrx-signalstore-lázaro-ortega-boix-qr8le/',
     },
     {
       id: 2,
-      name: 'OpenGraph images with Astro and i18n',
-      resume:
-        'We configure OpenGraph images in Astro to adapt to the different languages of our website.',
-      tags: ['Astro', 'og-images', 'i18n'],
-      link: 'link',
-    },
-    {
-      id: 3,
-      name: 'Deploy Docker containers in VPS with GitHub Actions',
-      resume:
-        'How to make a CI/CD pipeline to deploy Docker containers in a VPS with GitHub Actions',
-      tags: ['VPS', 'Docker', 'GitHub Actions', 'CI/CD'],
-      link: 'link',
-    },
-    {
-      id: 4,
-      name: 'You shouldn´t use Create React App',
-      resume:
-        'This is a post I made about why you should not use Create React App a couple of years ago. I still stand by this post today.',
-      tags: ['React', 'create-react-app'],
-      link: 'link',
+      name: 'The Future of JavaScript Error Handling',
+      resume: 'What is the Safe Assignment Operator (?=)?',
+      tags: ['Error Catching', 'ECMAScript', 'JavaScript'],
+      link: 'https://www.linkedin.com/pulse/el-futuro-del-manejo-de-errores-en-javascript-qué-es-safe-lázaro-rcobf/',
     },
   ];
 }
