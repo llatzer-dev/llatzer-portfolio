@@ -6,21 +6,19 @@
     <span class="text-bungee-shade text-xl md:text-4xl ml-2">.</span>
   </h2>
 
-  <div class="flex flex-col md:flex-row justify-center gap-10">
+  <div class="flex flex-col md:flex-row justify-center gap-20">
     @for (testimonial of testimonialsMockUp; track $index) {
-    <article class="w-full md:w-1/3">
-      <div class="flex items-center justify-center md:flex md:items-center mb-4 gap-4">
-        <div>
-          <img [src]="testimonial.companyIcon" [alt]="testimonial.companyName + 'Logo'"
-            class="w-16 h-16 rounded-full mb-2 bg-[{{testimonial.companyBackground}}] object-contain">
-          <p class="text-sm text-primary-white opacity-55">{{testimonial.companyName}}</p>
-        </div>
+    <article class="w-full md:w-1/2 border border-tertiary-black rounded-xl p-4">
+      <div class="flex items-center justify-center md:flex md:items-center gap-4">
+        <img [src]="testimonial.companyIcon" [alt]="testimonial.companyName + 'Logo'"
+          class="w-16 h-16 rounded-full mb-2 object-contain" [style.backgroundColor]="testimonial.companyBackground">
         <div class="text-left">
+          <p class="text-secondary-white">{{testimonial.testimonialPosition}} at <em>
+              {{testimonial.companyName}} </em> </p>
           <p class="text-primary-white font-bold">{{testimonial.testimonialName}}</p>
-          <p class="text-primary-white opacity-55">{{testimonial.testimonialPosition}}</p>
         </div>
       </div>
-      <p class="text-primary-white mb-4 text-left">"{{testimonial.testimonialText}}"</p>
+      <p class="text-primary-white my-6 text-left">"{{testimonial.testimonialText}}"</p>
       <a [href]="testimonial.testimonialFile"
         class="inline-flex items-center px-4 py-2 text-white bg-secondary-black hover:bg-tertiary-black rounded-xl transition-all duration-300 ease-in-out"
         download aria-label="Download Recommendation Letter">

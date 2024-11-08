@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { DIRECTION, SPEED } from '@app/models/enums';
 import { Career, SkillCategory, Stack } from '@app/models/interfaces';
 import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
@@ -6,7 +7,7 @@ import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
 @Component({
   selector: 'app-know-more',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './know-more.component.html',
   styleUrls: ['./know-more.component.css'],
 })
