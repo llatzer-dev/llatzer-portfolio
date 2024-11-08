@@ -21,7 +21,7 @@ export class BlogComponent {
       id: 2,
       name: 'The Future of JavaScript Error Handling',
       resume: 'What is the Safe Assignment Operator (?=)?',
-      tags: ['Error Catching', 'ECMAScript', 'JavaScript'],
+      tags: ['Error Handling', 'ECMAScript', 'JavaScript'],
       link: 'https://www.linkedin.com/pulse/el-futuro-del-manejo-de-errores-en-javascript-qué-es-safe-lázaro-rcobf/',
     },
   ];

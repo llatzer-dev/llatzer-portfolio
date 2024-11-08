@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 const AppRoutes = {
   CAREER: 'career',
   ABOUTME: 'about-me',
-  BLOGS: 'blog',
+  BLOG: 'blog',
 };
 
 export const routes: Routes = [
@@ -26,5 +26,10 @@ export const routes: Routes = [
       import('@app/pages/about-me/about-me.component').then(
         (m) => m.AboutMeComponent
       ),
+  },
+  {
+    path: AppRoutes.BLOG,
+    loadComponent: () =>
+      import('@app/pages/blog/blog.component').then((m) => m.BlogComponent),
   },
 ];
