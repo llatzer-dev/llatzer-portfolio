@@ -7,7 +7,7 @@
   </h2>
 
   <div class="flex flex-wrap gap-6 overflow-hidden">
-    <ul class="gap-4 grid grid-cols-1 md:grid-cols-2 relative {{ blogs().length > 2 ? 'blog-mask' : '' }}">
+    <ul class="gap-6 grid grid-cols-1 md:grid-cols-2 relative {{ blogs().length > 2 ? 'blog-mask' : '' }}">
       @for (blog of blogs(); track $index) {
       <li class="flex w-full flex-col">
         <a href="{{blog.link}}" target="_blank">
