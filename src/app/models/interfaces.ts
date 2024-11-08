@@ -48,6 +48,7 @@ export interface Testimonial {
 
 export interface Blog {
   id: number;
+  date: string;
   name: string;
   resume: string;
   tags: string[];

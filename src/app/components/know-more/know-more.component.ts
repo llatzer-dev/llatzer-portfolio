@@ -115,7 +115,7 @@ export class KnowMoreComponent implements AfterViewInit {
     },
     {
       id: 2,
-      position: 'Internship Student',
+      position: 'Professional Internship',
       company: 'NTTData',
       location: 'Alicante',
       time: '2022-2022',

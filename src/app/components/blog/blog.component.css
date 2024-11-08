@@ -1,0 +1,15 @@
+.blog-mask {
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-mask:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 75%; /* Incrementa la altura del difuminado para una mejor transición */
+  left: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: linear-gradient(transparent, #18181b 90%);
+}
