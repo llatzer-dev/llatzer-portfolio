@@ -22,30 +22,6 @@ export class BlogService {
       tags: ['Error Handling', 'ECMAScript', 'JavaScript'],
       link: 'https://www.linkedin.com/pulse/el-futuro-del-manejo-de-errores-en-javascript-qué-es-safe-lázaro-rcobf/',
     },
-    {
-      id: 3,
-      date: '9 Oct 2024',
-      name: 'The Future of JavaScript Error Handling',
-      resume: 'What is the Safe Assignment Operator (?=)?',
-      tags: ['Error Handling', 'ECMAScript', 'JavaScript'],
-      link: 'https://www.linkedin.com/pulse/el-futuro-del-manejo-de-errores-en-javascript-qué-es-safe-lázaro-rcobf/',
-    },
-    {
-      id: 4,
-      date: '9 Oct 2024',
-      name: 'The Future of JavaScript Error Handling',
-      resume: 'What is the Safe Assignment Operator (?=)?',
-      tags: ['Error Handling', 'ECMAScript', 'JavaScript'],
-      link: 'https://www.linkedin.com/pulse/el-futuro-del-manejo-de-errores-en-javascript-qué-es-safe-lázaro-rcobf/',
-    },
-    {
-      id: 5,
-      date: '9 Oct 2024',
-      name: 'The Future of JavaScript Error Handling',
-      resume: 'What is the Safe Assignment Operator (?=)?',
-      tags: ['Error Handling', 'ECMAScript', 'JavaScript'],
-      link: 'https://www.linkedin.com/pulse/el-futuro-del-manejo-de-errores-en-javascript-qué-es-safe-lázaro-rcobf/',
-    },
   ];
 
   constructor() {}
