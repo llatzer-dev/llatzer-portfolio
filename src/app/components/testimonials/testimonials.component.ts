@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, computed, HostBinding, inject } from '@angular/core';
 import { Testimonial } from '@app/models/interfaces';
+import { DarkmodeService } from '@app/services/darkmode.service';
 
 @Component({
   selector: 'app-testimonials',
@@ -9,6 +10,8 @@ import { Testimonial } from '@app/models/interfaces';
   styleUrl: './testimonials.component.css',
 })
 export class TestimonialsComponent {
+  public darkMode = inject(DarkmodeService);
+
   public testimonials: Testimonial[] = [
     {
       id: 1,
@@ -58,4 +61,10 @@ export class TestimonialsComponent {
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo porro, quod, quibusdam voluptatem nisi ut libero nemo aliquam laboriosam consequatur saepe debitis consectetur molestias. Obcaecati maxime mollitia esse libero consequuntur.',
     },
   ];
+
+  protected readonly darkMode$ = computed(() => this.darkMode.getDarkMode());
+
+  @HostBinding('class.dark') get mode() {
+    return this.darkMode.getDarkMode();
+  }
 }

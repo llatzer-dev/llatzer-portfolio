@@ -1,28 +1,40 @@
 @if(testimonials.length > 0){
 <section id="testimonials" class="mt-4 p-6 md:p-12 rounded-xl text-center">
-  <h2 class="text-xl md:text-4xl font-bold inline-flex items-center justify-center mb-8 text-secondary-white">
+  <h2
+    class="text-xl md:text-4xl font-bold inline-flex items-center justify-center mb-8 text-primary-black dark:text-secondary-white">
+    @if (darkMode$()) {
     <img src="lucide/bungee-shade/sparkle-lucide.svg" alt="Recommendation Letters Icon" class="w-6 h-6 mr-2">
+    }
+    @else {
+    <img src="lucide/teja/sparkle-lucide.svg" alt="Recommendation Letters Icon" class="w-6 h-6 mr-2">
+    }
     Recommendation Letters
-    <span class="text-bungee-shade text-xl md:text-4xl ml-2">.</span>
+    <span class="text-teja dark:text-bungee-shade text-xl md:text-4xl ml-2">.</span>
   </h2>
 
   <div class="flex flex-col md:flex-row justify-center gap-6 md:gap-20">
     @for (testimonial of testimonialsMockUp; track $index) {
-    <article class="w-full md:w-1/2 border border-tertiary-black rounded-xl p-4">
+    <article
+      class="w-full md:w-1/2 border bg-primary-white dark:bg-transparent border-secondary-white dark:border-tertiary-black rounded-xl p-4">
       <div class="flex items-center justify-center md:flex md:items-center gap-4">
         <img [src]="testimonial.companyIcon" [alt]="testimonial.companyName + 'Logo'"
           class="w-16 h-16 rounded-full mb-2 object-contain" [style.backgroundColor]="testimonial.companyBackground">
         <div class="text-left">
-          <p class="text-secondary-white">{{testimonial.testimonialPosition}} at <em>
+          <p class="text-secondary-white dark:text-secondary-white">{{testimonial.testimonialPosition}} at <em>
               {{testimonial.companyName}} </em> </p>
-          <p class="text-primary-white font-bold">{{testimonial.testimonialName}}</p>
+          <p class="text-primary-black dark:text-primary-white font-bold">{{testimonial.testimonialName}}</p>
         </div>
       </div>
-      <p class="text-primary-white my-6 text-left">"{{testimonial.testimonialText}}"</p>
+      <p class="text-primary-black dark:text-primary-white my-6 text-left">"{{testimonial.testimonialText}}"</p>
       <a [href]="testimonial.testimonialFile"
-        class="inline-flex items-center px-4 py-2 text-white bg-secondary-black hover:bg-tertiary-black rounded-xl transition-all duration-300 ease-in-out"
+        class="inline-flex items-center px-4 py-2 border border-secondary-white dark:border-transparent text-primary-black dark:text-primary-white bg-transparent dark:bg-secondary-black hover:bg-secondary-white dark:hover:bg-tertiary-black rounded-xl transition-all duration-300 ease-in-out"
         download aria-label="Download Recommendation Letter">
+        @if (darkMode$()) {
         <img src="lucide/download-lucide.svg" alt="Download Icon" class="h-5 w-5 mr-1">
+        }
+        @else {
+        <img src="lucide/black/download-lucide.svg" alt="Download Icon" class="h-5 w-5 mr-1">
+        }
         Download
       </a>
     </article>

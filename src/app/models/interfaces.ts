@@ -25,6 +25,7 @@ export interface Social {
   socialName: string;
   socialLink: string;
   socialIcon: string;
+  socialIconLight: string;
 }
 
 export interface Career {

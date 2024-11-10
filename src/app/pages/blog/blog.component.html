@@ -1,14 +1,25 @@
 <section class="min-h-screen max-w-3xl mx-auto text-primary-white px-4 mt-6">
   <p class="text-lg text-secondary-white">Home / Blog</p>
 
-  <a class="text-primary-white flex items-center font-bold text-xl text-left mb-6 py-2" href="/">
+  <a class="text-primary-black dark:text-primary-white flex items-center font-bold text-xl text-left mb-6 py-2"
+    href="/">
+    @if (darkMode$()) {
     <img src="lucide/arrow-left-lucide.svg" alt="Arrow Left Icon" class="h-5 w-5 mr-2">
-    Go Back
+    }
+    @else {
+    <img src="lucide/black/arrow-left-lucide.svg" alt="Arrow Left Icon" class="h-5 w-5 mr-2">
+    }
+    Go Home
   </a>
 
   <div class="flex items-center mb-14">
+    @if (darkMode$()) {
     <img src="lucide/bungee-shade/notepad-text-lucide.svg" alt="Map Icon" class="h-8 w-8 mr-4">
-    <h1 class="text-4xl font-bold text-bungee-shade">Blog</h1>
+    }
+    @else {
+    <img src="lucide/teja/notepad-text-lucide.svg" alt="Map Icon" class="h-8 w-8 mr-4">
+    }
+    <h1 class="text-4xl font-bold text-teja dark:text-bungee-shade">Blog</h1>
   </div>
 
   <ul class="gap-4 grid grid-cols-1 md:grid-cols-2">
@@ -16,13 +27,14 @@
     <li class="flex w-full flex-col">
       <a href="{{blog.link}}" target="_blank">
         <div
-          class="flex py-4 px-4 flex-col gap-2 border border-tertiary-black rounded-xl hover:shadow transition-shadow ease-in-out duration-300">
-          <span class="text-primary-white text-lg"><strong>{{blog.name}}</strong></span>
-          <span class="text-sm text-primary-white opacity-50 mb-2">{{blog.date}}</span>
-          <span class="text-primary-white opacity-70">{{blog.resume}}</span>
+          class="flex py-4 px-4 flex-col gap-2 border border-secondary-white dark:border-tertiary-black bg-primary-white dark:bg-transparent rounded-xl hover:shadow transition-shadow ease-in-out duration-300">
+          <span class="text-primary-black dark:text-primary-white text-lg"><strong>{{blog.name}}</strong></span>
+          <span class="text-sm text-primary-black dark:text-primary-white opacity-50 mb-2">{{blog.date}}</span>
+          <span class="text-primary-black dark:text-primary-white opacity-70">{{blog.resume}}</span>
           <div class="flex items-center w-full gap-2 flex-wrap">
             @for (tag of blog.tags; track $index) {
-            <span class="text-sm px-2 py-1 rounded-md text-primary-white bg-tertiary-black">{{tag}}</span>
+            <span
+              class="text-sm px-2 py-1 rounded-md text-primary-white bg-secondary-white dark:bg-tertiary-black">{{tag}}</span>
             }
           </div>
         </div>
@@ -32,18 +44,25 @@
   </ul>
 
   <div class="flex flex-wrap gap-6 justify-center my-12">
-    <h2 class="text-5xl md:text-9xl font-bold text-secondary-white flex items-center justify-center mb-4 px-4 py-2">
+    <h2
+      class="text-5xl md:text-9xl font-bold text-primary-black dark:text-secondary-white flex items-center justify-center mb-4 px-4 py-2">
       <span class="text-center">See more</span>
-      <span class="text-bungee-shade ml-2">.</span>
+      <span class="text-teja dark:text-bungee-shade ml-2">.</span>
     </h2>
 
     <ul class="gap-4 grid grid-cols-1 md:grid-cols-2 w-full">
       <li class="flex flex-col w-full">
         <a href="/career" class="focus:ring-2 focus:ring-bungee-shade rounded-lg transition">
           <div
-            class="flex items-center gap-2 justify-center w-full py-3 font-semibold text-white bg-secondary-black rounded-lg shadow-md transition-all duration-300 ease-in-out hover:bg-tertiary-black hover:shadow-lg">
+            class="flex items-center gap-2 justify-center w-full py-3 font-semibold border border-secondary-white dark:border-none text-primary-black dark:text-white bg-primary-white dark:bg-secondary-black rounded-lg shadow-md transition-all duration-300 ease-in-out hover:bg-secondary-white dark:hover:bg-tertiary-black hover:shadow-lg">
+            @if (darkMode$()) {
             <img src="lucide/bungee-shade/briefcase-lucide.svg" alt="Career Icon"
               class="h-5 w-5 ml-1 transition-transform duration-200">
+            }
+            @else {
+            <img src="lucide/teja/briefcase-lucide.svg" alt="Career Icon"
+              class="h-5 w-5 ml-1 transition-transform duration-200">
+            }
             Career
           </div>
         </a>
@@ -52,8 +71,15 @@
       <li class="flex flex-col w-full">
         <a href="/about-me" class="focus:ring-2 focus:ring-bungee-shade rounded-lg transition">
           <div
-            class="flex items-center gap-2 justify-center w-full py-3 font-semibold text-white bg-secondary-black rounded-lg shadow-md transition-all duration-300 ease-in-out hover:bg-tertiary-black hover:shadow-lg">
-            <img src="lucide/bungee-shade/map-pin.svg" [alt]="" class="h-5 w-5 ml-1 transition-transform duration-200">
+            class="flex items-center gap-2 justify-center w-full py-3 font-semibold border border-secondary-white dark:border-none text-primary-black dark:text-white bg-primary-white dark:bg-secondary-black rounded-lg shadow-md transition-all duration-300 ease-in-out hover:bg-secondary-white dark:hover:bg-tertiary-black hover:shadow-lg">
+            @if (darkMode$()) {
+            <img src="lucide/bungee-shade/map-pin.svg" alt="About me Icon"
+              class="h-5 w-5 ml-1 transition-transform duration-200">
+            }
+            @else {
+            <img src="lucide/teja/map-pin.svg" alt="About me Icon"
+              class="h-5 w-5 ml-1 transition-transform duration-200">
+            }
             About me
           </div>
         </a>

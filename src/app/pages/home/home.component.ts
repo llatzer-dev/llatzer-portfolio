@@ -1,4 +1,10 @@
-import { Component, inject, signal, Signal } from '@angular/core';
+import {
+  Component,
+  computed,
+  HostBinding,
+  inject,
+  Renderer2,
+} from '@angular/core';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { HeroComponent } from '../../components/hero/hero.component';
 import { KnowMoreComponent } from '../../components/know-more/know-more.component';
@@ -8,6 +14,8 @@ import { LetstalkComponent } from '../../components/letstalk/letstalk.component'
 import { MenuComponent } from '../../components/menu/menu.component';
 import { Blog } from '@app/models/interfaces';
 import { BlogService } from '@app/services/blog.service';
+import { DarkmodeService } from '@app/services/darkmode.service';
+import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
 
 @Component({
   selector: 'app-home',
@@ -26,11 +34,20 @@ import { BlogService } from '@app/services/blog.service';
 })
 export class HomeComponent {
   private blogService = inject(BlogService);
+  private darkMode = inject(DarkmodeService);
+  private renderer = inject(Renderer2);
+  private isBrowser = inject(CheckPlatformUtility);
 
   public oldHero: boolean = false;
   public blogs: Blog[] = [];
 
   ngOnInit(): void {
     this.blogs = this.blogService.getBlogs();
+
+    if (this.darkMode.getDarkMode() && this.isBrowser.checkIfBrowser()) {
+      this.renderer.setStyle(document.body, 'backgroundColor', '#18181b');
+    } else {
+      this.renderer.setStyle(document.body, 'backgroundColor', '#fff8e4');
+    }
   }
 }

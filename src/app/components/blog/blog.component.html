@@ -1,24 +1,32 @@
 @if (blogs().length > 0) {
 <section id="blog" class="mt-4 p-6 md:p-12">
-  <h2 class="text-4xl font-bold text-secondary-white flex items-center justify-center mb-4 px-4 py-2">
+  <h2
+    class="text-4xl font-bold text-primary-black dark:text-secondary-white flex items-center justify-center mb-4 px-4 py-2">
+    @if (darkMode$()) {
     <img src="lucide/bungee-shade/notepad-text-lucide.svg" alt="Blog Icon" class="w-8 h-8 mr-2">
+    }
+    @else {
+    <img src="lucide/teja/notepad-text-lucide.svg" alt="Blog Icon" class="w-8 h-8 mr-2">
+    }
     <span class="text-center">Blog</span>
-    <span class="text-bungee-shade ml-2">.</span>
+    <span class="text-teja dark:text-bungee-shade ml-2">.</span>
   </h2>
 
   <div class="flex flex-wrap gap-6 overflow-hidden">
-    <ul class="gap-6 grid grid-cols-1 md:grid-cols-2 relative {{ blogs().length > 2 ? 'blog-mask' : '' }}">
+    <ul
+      class="gap-6 grid grid-cols-1 md:grid-cols-2 relative {{ darkMode$() ? (blogs().length > 2 ? 'blog-mask' : '')  : (blogs().length > 2 ? 'blog-mask-light' : '') }}">
       @for (blog of blogs(); track $index) {
       <li class="flex w-full flex-col">
         <a href="{{blog.link}}" target="_blank">
           <div
-            class="h-48 flex py-4 px-4 flex-col gap-2 border border-tertiary-black rounded-xl hover:shadow transition-shadow ease-in-out duration-300">
-            <span class="text-primary-white text-lg"><strong>{{blog.name}}</strong></span>
-            <span class="text-sm text-primary-white opacity-50 mb-2">{{blog.date}}</span>
+            class="h-56 md:h-48 flex py-4 px-4 flex-col gap-2 bg-primary-white dark:bg-transparent border border-secondary-white dark:border-tertiary-black rounded-xl hover:shadow transition-shadow ease-in-out duration-300">
+            <span class="text-primary-black dark:text-primary-white text-lg"><strong>{{blog.name}}</strong></span>
+            <span class="text-sm text-primary-black dark:text-primary-white opacity-50 mb-2">{{blog.date}}</span>
             <span class="text-secondary-white">{{blog.resume}}</span>
             <div class="flex items-center w-full gap-2 flex-wrap">
               @for (tag of blog.tags; track $index) {
-              <span class="text-sm px-2 py-1 rounded-md text-primary-white bg-tertiary-black">{{tag}}</span>
+              <span
+                class="text-sm px-2 py-1 rounded-md text-primary-white bg-secondary-white dark:bg-tertiary-black">{{tag}}</span>
               }
             </div>
           </div>
@@ -29,10 +37,16 @@
 
     @if (blogs().length > 2) {
     <a href="/blog" target="_blank"
-      class="flex items-center justify-center w-full py-2 font-semibold text-white bg-secondary-black rounded-lg hover:bg-tertiary-black transition-colors duration-300 ease-in-out group">
+      class="flex items-center justify-center w-full py-2 font-semibold text-primary-black dark:text-white border border-secondary-white dark:border-transparent bg-primary-white dark:bg-secondary-black rounded-lg hover:bg-secondary-white dark:hover:bg-tertiary-black transition-colors duration-300 ease-in-out group">
       See more
+      @if (darkMode$()) {
       <img src="lucide/arrow-right-lucide.svg" alt="Arrow Right Icon"
         class="h-5 w-5 ml-1 transition-transform duration-200 transform group-hover:translate-x-1 group-hover:ml-1.5">
+      }
+      @else {
+      <img src="lucide/black/arrow-right-lucide.svg" alt="Arrow Right Icon"
+        class="h-5 w-5 ml-1 transition-transform duration-200 transform group-hover:translate-x-1 group-hover:ml-1.5">
+      }
     </a>
     }
 

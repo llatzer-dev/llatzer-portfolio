@@ -1,44 +1,42 @@
 <nav id="navbar" aria-label="Main navigation"
-  class="flex flex-col md:flex-row items-center justify-between p-4 bg-secondary-black rounded-xl mt-4">
+  class="flex flex-col md:flex-row items-center justify-between p-4 border border-secondary-white dark:border-none bg-primary-white dark:bg-secondary-black rounded-xl mt-4">
   <div
     class="flex flex-row-reverse justify-between w-full md:w-auto md:flex-row items-center space-x-4 mb-4 md:mb-0 pl-2 pr-6 md:p-0">
     <img src="Logo-Llatzer.webp" alt="Logo" class="w-10 h-auto rounded-lg">
     <div class="flex flex-col">
-      <p class="text-3xl text-bungee-shade font-bold">Lazaro Ortega</p>
-      <p class="text-lg text-secondary-white font-semibold">FullStack Developer</p>
+      <p class="text-3xl text-teja dark:text-bungee-shade font-bold">Lazaro Ortega</p>
+      <p class="text-lg dark:text-secondary-white font-semibold">FullStack Developer</p>
     </div>
   </div>
   <ul class="flex flex-row items-center space-x-2">
     <li>
-      <a href="https://github.com/llatzer-dev" target="_blank"
-        class="flex items-center justify-center bg-tertiary-black text-primary-white rounded-xl overflow-hidden transition-colors duration-300">
-        <span class="transition-transform duration-300 hover:scale-125 px-4 py-2">
-          <img src="lucide/github-lucide.svg" alt="Github Icon" class="h-5 w-5">
+      <button (click)="setDarkMode()"
+        class="flex items-center justify-center border border-secondary-white dark:border-none text-primary-white rounded-xl overflow-hidden transition-colors duration-300">
+        @if(!darkMode$()) {
+        <span
+          class="dark:border-none bg-primary-white dark:bg-tertiary-black text-primary-white px-4 py-2 transition-transform duration-300 hover:scale-125">
+          <img src="sun.svg" alt="Light Mode Icon" class="h-5 w-5">
         </span>
-      </a>
-    </li>
-    <li>
-      <a href="https://www.linkedin.com/in/lazaro-ortega-boix/" target="_blank"
-        class="flex items-center justify-center bg-tertiary-black text-primary-white rounded-xl overflow-hidden transition-colors duration-300">
-        <span class="transition-transform duration-300 hover:scale-125 px-4 py-2">
-          <img src="lucide/linkedin-lucide.svg" alt="LinkedIn Icon" class="h-5 w-5">
+        }
+        @else {
+        <span
+          class="bg-primary-white dark:bg-tertiary-black px-4 py-2 transition-transform duration-300 hover:scale-125">
+          <img src="moon.svg" alt="Moon Mode Icon" class="h-5 w-5">
         </span>
-      </a>
-    </li>
-    <li>
-      <a href="mailto:lazaro.ortega.boix@gmail.com"
-        class="flex items-center justify-center bg-tertiary-black text-primary-white rounded-xl overflow-hidden transition-colors duration-300">
-        <span class="transition-transform duration-300 hover:scale-125 px-4 py-2">
-          <img src="lucide/mail-lucide.svg" alt="Email Icon" class="h-5 w-5">
-        </span>
-      </a>
+        }
+      </button>
     </li>
     <li>
       <a href="#letstalk"
-        class="flex items-center justify-center bg-bungee-shade text-secondary-black rounded-xl overflow-hidden transition-colors duration-300">
+        class="flex items-center justify-center bg-teja dark:bg-bungee-shade text-primary-white dark:text-secondary-black rounded-xl overflow-hidden transition-colors duration-300">
         <span class="flex items-center font-semibold transition-transform duration-300 hover:scale-110 py-2 px-4">
           Let's Talk
+          @if(!darkMode$()) {
+          <img src="lucide/arrow-up-right-lucide.svg" alt="Arrow Up Right Icon" class="h-5 w-5">
+          }
+          @else {
           <img src="lucide/black/arrow-up-right-lucide.svg" alt="Arrow Up Right Icon" class="h-5 w-5">
+          }
         </span>
       </a>
     </li>

@@ -1,4 +1,11 @@
-import { AfterViewInit, Component, inject } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  computed,
+  HostBinding,
+  inject,
+} from '@angular/core';
+import { DarkmodeService } from '@app/services/darkmode.service';
 import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
 
 @Component({
@@ -10,6 +17,13 @@ import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
 })
 export class MenuComponent implements AfterViewInit {
   private checkPlatform = inject(CheckPlatformUtility);
+  public darkMode = inject(DarkmodeService);
+
+  protected readonly darkMode$ = computed(() => this.darkMode.getDarkMode());
+
+  @HostBinding('class.dark') get mode() {
+    return this.darkMode.getDarkMode();
+  }
 
   ngAfterViewInit() {
     if (this.checkPlatform.checkIfBrowser()) {

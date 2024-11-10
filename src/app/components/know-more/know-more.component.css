@@ -54,14 +54,14 @@
   }
 }
 
-.tag-list li {
-  background: var(--clr-primary-400);
-  box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
-}
-
 .tag-list li:hover {
   border-color: white;
   box-shadow: 0 0 5px white;
+}
+
+.tag-list-light li:hover {
+  border-color: black;
+  box-shadow: 0 0 5px black;
 }
 
 .dark-scroll {

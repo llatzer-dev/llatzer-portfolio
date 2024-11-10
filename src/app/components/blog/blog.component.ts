@@ -1,6 +1,6 @@
-import { Component, inject, input } from '@angular/core';
+import { Component, computed, HostBinding, inject, input } from '@angular/core';
 import { Blog } from '@app/models/interfaces';
-import { BlogService } from '@app/services/blog.service';
+import { DarkmodeService } from '@app/services/darkmode.service';
 
 @Component({
   selector: 'app-blog',
@@ -10,5 +10,13 @@ import { BlogService } from '@app/services/blog.service';
   styleUrl: './blog.component.css',
 })
 export class BlogComponent {
-  blogs = input.required<Blog[]>();
+  public darkMode = inject(DarkmodeService);
+
+  public blogs = input.required<Blog[]>();
+
+  protected readonly darkMode$ = computed(() => this.darkMode.getDarkMode());
+
+  @HostBinding('class.dark') get mode() {
+    return this.darkMode.getDarkMode();
+  }
 }

@@ -7,9 +7,25 @@
   content: "";
   position: absolute;
   width: 100%;
-  height: 75%; /* Incrementa la altura del difuminado para una mejor transición */
+  height: 75%; /* Increase the height of the blur for a better transition */
   left: 0;
   bottom: 0;
   pointer-events: none;
   background: linear-gradient(transparent, #18181b 90%);
+}
+
+.blog-mask-light {
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-mask-light:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 75%; /* Increase the height of the blur for a better transition */
+  left: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: linear-gradient(transparent, #fff8e4 90%);
 }

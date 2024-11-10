@@ -1,31 +1,44 @@
 <section class="min-h-screen max-w-2xl mx-auto text-primary-white px-4 mt-6">
   <p class="text-lg text-secondary-white">Home / About me</p>
 
-  <a class="text-primary-white flex items-center font-bold text-xl text-left mb-6 py-2" href="/">
+  <a class="text-primary-black dark:text-primary-white flex items-center font-bold text-xl text-left mb-6 py-2"
+    href="/">
+    @if (darkMode$()) {
     <img src="lucide/arrow-left-lucide.svg" alt="Arrow Left Icon" class="h-5 w-5 mr-2">
-    Go Back
+    }
+    @else {
+    <img src="lucide/black/arrow-left-lucide.svg" alt="Arrow Left Icon" class="h-5 w-5 mr-2">
+    }
+    Go Home
   </a>
 
   <div class="flex items-center mb-6">
+    @if (darkMode$()) {
     <img src="lucide/bungee-shade/map-pin.svg" alt="Map Icon" class="h-8 w-8 mr-4">
-    <h1 class="text-4xl font-bold text-bungee-shade">With love, from Alicante</h1>
+    }
+    @else {
+    <img src="lucide/teja/map-pin.svg" alt="Map Icon" class="h-8 w-8 mr-4">
+    }
+    <h1 class="text-4xl font-bold text-teja dark:text-bungee-shade">With love, from Alicante</h1>
   </div>
 
-  <p class="text-xl text-pretty text-secondary-white max-w-2xl mb-4">
+  <p class="text-xl text-pretty text-primary-black dark:text-secondary-white max-w-2xl mb-4">
     Hi! I'm <strong>Lázaro Ortega</strong>, also known as <strong>Llatzer</strong>. I'm 22 years old.
   </p>
-  <p class="text-xl text-pretty text-secondary-white max-w-2xl mb-4">I'm a developer specialiced in
-    Angular and Java.</p>
-  <p class="text-xl text-pretty text-secondary-white max-w-2xl mb-4">
+  <p class="text-xl text-pretty text-primary-black dark:text-secondary-white max-w-2xl mb-4">
+    I'm a developer specialiced in Angular and Java.
+  </p>
+  <p class="text-xl text-pretty text-primary-black dark:text-secondary-white max-w-2xl mb-4">
     I'm passionate about understanding how things work and the reasoning behind every detail, both in technology and in
     the world at large.
   </p>
 
-  <p class="text-xl text-pretty text-secondary-white max-w-2xl mb-8">
+  <p class="text-xl text-pretty text-primary-black dark:text-secondary-white max-w-2xl mb-8">
     I have always thought that defining oneself is difficult, but I am going to try:
   </p>
 
-  <div class="max-w-2xl mb-8 border-2 border-dashed border-secondary-white p-6 rounded-xl">
+  <div
+    class="max-w-2xl mb-8 bg-secondary-black dark:bg-transparent dark:border-2 dark:border-dashed dark:border-secondary-white p-6 rounded-xl">
     <div class="text-xl">
       <p class="text-secondary-white flex items-center mb-6">
         <img src="food.svg" alt="Food Icon" class="h-5 w-5 mr-4">
@@ -57,20 +70,25 @@
 
   <div class="max-w-2xl my-14">
     <div class="flex items-center mb-6">
+      @if (darkMode$()) {
       <img src="lucide/bungee-shade/graduation-cap.svg" alt="Map Icon" class="h-7 w-7 mr-4">
-      <h2 class="text-3xl font-semibold text-bungee-shade">Academic Background</h2>
+      }
+      @else {
+      <img src="lucide/teja/graduation-cap.svg" alt="Map Icon" class="h-7 w-7 mr-4">
+      }
+      <h2 class="text-3xl font-semibold text-teja dark:text-bungee-shade">Academic Background</h2>
     </div>
-    <p class="text-xl text-secondary-white mb-4">
+    <p class="text-xl text-primary-black dark:text-secondary-white mb-4">
       <strong>Professional Internship</strong> - NTTDATA, Alicante (2022)
     </p>
-    <p class="text-xl text-secondary-white mb-2">
+    <p class="text-xl text-primary-black dark:text-secondary-white mb-2">
       <strong>Higher National Diploma in Multiplatform Application Development (DAM)</strong> - IES Marcos Zaragoza,
       Villajoyosa, Alicante (2020 - 2022)
     </p>
-    <p class="text-base text-secondary-white">
+    <p class="text-base text-primary-black dark:text-secondary-white">
       <strong>Technologies & Tools</strong>
     </p>
-    <ul class="text-base list-disc pl-6 text-secondary-white">
+    <ul class="text-base list-disc pl-6 text-primary-black dark:text-secondary-white">
       <li>Languages: HTML, CSS, JavaScript, Java, Dart</li>
       <li>Frameworks: Angular, Flutter</li>
       <li>Preprocessors: TypeScript</li>
@@ -78,19 +96,26 @@
     </ul>
   </div>
 
-  <div class="flex flex-wrap gap-6 justify-center my-12">
-    <h2 class="text-5xl md:text-9xl font-bold text-secondary-white flex items-center justify-center mb-4 px-4 py-2">
+  <div class="flex flex-wrap gap-6 justify-center mb-40 mt-20">
+    <h2
+      class="text-5xl md:text-9xl font-bold text-primary-black dark:text-secondary-white flex items-center justify-center mb-4 px-4 py-2">
       <span class="text-center">See more</span>
-      <span class="text-bungee-shade ml-2">.</span>
+      <span class="text-teja dark:text-bungee-shade ml-2">.</span>
     </h2>
 
     <ul class="gap-4 grid grid-cols-1 md:grid-cols-2 w-full">
       <li class="flex flex-col w-full">
         <a href="/career" class="focus:ring-2 focus:ring-bungee-shade rounded-lg transition">
           <div
-            class="flex items-center gap-2 justify-center w-full py-3 font-semibold text-white bg-secondary-black rounded-lg shadow-md transition-all duration-300 ease-in-out hover:bg-tertiary-black hover:shadow-lg">
+            class="flex items-center gap-2 justify-center w-full py-3 font-semibold border border-secondary-white dark:border-none text-primary-black dark:text-white bg-primary-white dark:bg-secondary-black rounded-lg shadow-md transition-all duration-300 ease-in-out hover:bg-secondary-white dark:hover:bg-tertiary-black hover:shadow-lg">
+            @if (darkMode$()) {
             <img src="lucide/bungee-shade/briefcase-lucide.svg" alt="Career Icon"
               class="h-5 w-5 ml-1 transition-transform duration-200">
+            }
+            @else {
+            <img src="lucide/teja/briefcase-lucide.svg" alt="Career Icon"
+              class="h-5 w-5 ml-1 transition-transform duration-200">
+            }
             Career
           </div>
         </a>
@@ -99,9 +124,15 @@
       <li class="flex flex-col w-full">
         <a href="/blog" class="focus:ring-2 focus:ring-bungee-shade rounded-lg transition">
           <div
-            class="flex items-center gap-2 justify-center w-full py-3 font-semibold text-white bg-secondary-black rounded-lg shadow-md transition-all duration-300 ease-in-out hover:bg-tertiary-black hover:shadow-lg">
-            <img src="lucide/bungee-shade/notepad-text-lucide.svg" [alt]=""
+            class="flex items-center gap-2 justify-center w-full py-3 font-semibold border border-secondary-white dark:border-none text-primary-black dark:text-white bg-primary-white dark:bg-secondary-black rounded-lg shadow-md transition-all duration-300 ease-in-out hover:bg-secondary-white dark:hover:bg-tertiary-black hover:shadow-lg">
+            @if (darkMode$()) {
+            <img src="lucide/bungee-shade/notepad-text-lucide.svg" alt="Blog Icon"
               class="h-5 w-5 ml-1 transition-transform duration-200">
+            }
+            @else {
+            <img src="lucide/teja/notepad-text-lucide.svg" alt="Blog Icon"
+              class="h-5 w-5 ml-1 transition-transform duration-200">
+            }
             Blog
           </div>
         </a>

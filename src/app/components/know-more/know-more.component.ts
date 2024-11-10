@@ -1,7 +1,15 @@
-import { AfterViewInit, Component, ElementRef, inject } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  computed,
+  ElementRef,
+  HostBinding,
+  inject,
+} from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { DIRECTION, SPEED } from '@app/models/enums';
 import { Career, SkillCategory, Stack } from '@app/models/interfaces';
+import { DarkmodeService } from '@app/services/darkmode.service';
 import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
 
 @Component({
@@ -14,6 +22,7 @@ import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
 export class KnowMoreComponent implements AfterViewInit {
   private checkPlatform = inject(CheckPlatformUtility);
   private el = inject(ElementRef);
+  public darkMode = inject(DarkmodeService);
 
   public skillsCategories: SkillCategory[] = [
     {
@@ -123,6 +132,12 @@ export class KnowMoreComponent implements AfterViewInit {
   ];
 
   private scrollTimeout: any;
+
+  protected readonly darkMode$ = computed(() => this.darkMode.getDarkMode());
+
+  @HostBinding('class.dark') get mode() {
+    return this.darkMode.getDarkMode();
+  }
 
   ngAfterViewInit() {
     if (this.checkPlatform.checkIfBrowser()) {
