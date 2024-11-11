@@ -32,4 +32,9 @@ export const routes: Routes = [
     loadComponent: () =>
       import('@app/pages/blog/blog.component').then((m) => m.BlogComponent),
   },
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full',
+  },
 ];
