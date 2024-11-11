@@ -32,5 +32,14 @@ export class NavbarComponent {
     } else {
       this.renderer.setStyle(document.body, 'backgroundColor', '#fff8e4');
     }
+
+    this.playSound();
+  }
+
+  private playSound() {
+    const audio = new Audio();
+    audio.src = 'sounds/switch.mp3';
+    audio.load();
+    audio.play();
   }
 }
