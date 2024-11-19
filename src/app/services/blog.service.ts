@@ -13,6 +13,7 @@ export class BlogService {
       resume: 'The use of the Store as Single Source Of Truth',
       tags: ['Frontend', 'Angular', 'NgRx', 'SSOT'],
       link: 'https://www.linkedin.com/pulse/angular-18-ngrx-signalstore-lázaro-ortega-boix-qr8le/',
+      isHighlight: true,
     },
     {
       id: 2,
@@ -21,6 +22,7 @@ export class BlogService {
       resume: 'What is the Safe Assignment Operator (?=)?',
       tags: ['Error Handling', 'ECMAScript', 'JavaScript'],
       link: 'https://www.linkedin.com/pulse/el-futuro-del-manejo-de-errores-en-javascript-qué-es-safe-lázaro-rcobf/',
+      isHighlight: false,
     },
   ];
 

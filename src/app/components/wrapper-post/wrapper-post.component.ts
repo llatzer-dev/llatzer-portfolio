@@ -1,27 +1,14 @@
 import { CommonModule } from '@angular/common';
-import { Component, computed, HostBinding, inject, input } from '@angular/core';
-import { Blog } from '@app/models/interfaces';
-import { DarkmodeService } from '@app/services/darkmode.service';
-import { WrapperPostComponent } from '../wrapper-post/wrapper-post.component';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-blog',
+  selector: 'app-wrapper-post',
   standalone: true,
-  imports: [CommonModule, WrapperPostComponent],
-  templateUrl: './blog.component.html',
-  styleUrl: './blog.component.css',
+  imports: [CommonModule],
+  templateUrl: './wrapper-post.component.html',
+  styleUrl: './wrapper-post.component.css',
 })
-export class BlogComponent {
-  public darkMode = inject(DarkmodeService);
-
-  public blogs = input.required<Blog[]>();
-
-  protected readonly darkMode$ = computed(() => this.darkMode.getDarkMode());
-
-  @HostBinding('class.dark') get mode() {
-    return this.darkMode.getDarkMode();
-  }
-
+export class WrapperPostComponent {
   project = {
     title: 'Sample Project',
     description:
@@ -51,23 +38,29 @@ export class BlogComponent {
       x: event.clientX - rect.left,
       y: event.clientY - rect.top,
     };
+
+    console.log('onMouseMove');
   }
 
   handleFocus() {
     this.focused = true;
     this.opacity = 1;
+    console.log('handleFocus');
   }
 
   handleBlur() {
     this.focused = false;
     this.opacity = 0;
+    console.log('handleBlur');
   }
 
   handleMouseEnter() {
     this.opacity = 1;
+    console.log('handleMouseEnter');
   }
 
   handleMouseLeave() {
     this.opacity = 0;
+    console.log('handleMouseLeave');
   }
 }

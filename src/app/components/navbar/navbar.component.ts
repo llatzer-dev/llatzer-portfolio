@@ -28,7 +28,7 @@ export class NavbarComponent {
     this.darkMode.setDarkMode();
 
     if (this.darkMode.getDarkMode()) {
-      this.renderer.setStyle(document.body, 'backgroundColor', '#18181b');
+      this.renderer.setStyle(document.body, 'backgroundColor', '#0E0E0E');
     } else {
       this.renderer.setStyle(document.body, 'backgroundColor', '#fff8e4');
     }

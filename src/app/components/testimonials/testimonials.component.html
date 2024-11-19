@@ -1,32 +1,52 @@
 @if(testimonials.length > 0){
-<section id="testimonials" class="mt-4 p-6 md:p-12 rounded-xl text-center">
+<section id="testimonials" class="mt-4 rounded-xl text-center">
   <h2
-    class="text-xl md:text-4xl font-bold inline-flex items-center justify-center mb-8 text-primary-black dark:text-secondary-white">
+    class="text-3xl md:text-5xl font-bold inline-flex items-center justify-center mb-12 text-primary-black dark:text-secondary-white">
     @if (darkMode$()) {
-    <img src="lucide/bungee-shade/sparkle-lucide.svg" alt="Recommendation Letters Icon" class="w-6 h-6 mr-2">
+    <img src="lucide/bungee-shade/sparkle-lucide.svg" alt="Recommendation Letters Icon"
+      class="w-8 h-8 md:w-10 md:h-10 mr-2">
     }
     @else {
-    <img src="lucide/teja/sparkle-lucide.svg" alt="Recommendation Letters Icon" class="w-6 h-6 mr-2">
+    <img src="lucide/teja/sparkle-lucide.svg" alt="Recommendation Letters Icon" class="w-8 h-8 md:w-10 md:h-10 mr-2">
     }
-    Recommendation Letters
-    <span class="text-teja dark:text-bungee-shade text-xl md:text-4xl ml-2">.</span>
+    Recommendation
+    <span class="hidden md:block">
+      Letters
+    </span>
+    <span class="text-teja dark:text-bungee-shade ml-2">.</span>
   </h2>
 
-  <div class="flex flex-col md:flex-row justify-center gap-6 md:gap-20">
+  <div class="flex flex-col md:flex-row justify-center gap-6 md:gap-12">
     @for (testimonial of testimonialsMockUp; track $index) {
-    <article
-      class="w-full md:w-1/2 border bg-primary-white dark:bg-transparent border-secondary-white dark:border-tertiary-black rounded-xl p-4">
+    @let companyIcon = testimonial.companyIcon;
+    @let companyBg = testimonial.companyBackground;
+    @let companyName = testimonial.companyName;
+    @let position = testimonial.testimonialPosition;
+    @let name = testimonial.testimonialName;
+    @let text = testimonial.testimonialText;
+    @let downloadFile = testimonial.testimonialFile;
+    @let isHighlight = testimonial.isHighlight;
+
+    <article appBorderHighlight [isHighlight]="isHighlight"
+      class="w-full md:w-1/2 border bg-primary-white dark:bg-transparent border-secondary-white dark:border-tertiary-black rounded-xl p-8">
       <div class="flex items-center justify-center md:flex md:items-center gap-4">
-        <img [src]="testimonial.companyIcon" [alt]="testimonial.companyName + 'Logo'"
-          class="w-16 h-16 rounded-full mb-2 object-contain" [style.backgroundColor]="testimonial.companyBackground">
+        <img [src]="companyIcon" [alt]="companyName + 'Logo'" class="w-16 h-16 rounded-full mb-2 object-contain"
+          [style.backgroundColor]="companyBg">
         <div class="text-left">
-          <p class="text-secondary-white dark:text-secondary-white">{{testimonial.testimonialPosition}} at <em>
-              {{testimonial.companyName}} </em> </p>
-          <p class="text-primary-black dark:text-primary-white font-bold">{{testimonial.testimonialName}}</p>
+          <p class="text-secondary-white dark:text-secondary-white">
+            {{position}} at <em> {{companyName}} </em>
+          </p>
+          <p class="text-primary-black dark:text-primary-white font-bold">{{name}}</p>
         </div>
       </div>
-      <p class="text-primary-black dark:text-primary-white my-6 text-left">"{{testimonial.testimonialText}}"</p>
-      <a [href]="testimonial.testimonialFile"
+
+      <p class="flex gap-4 text-primary-black dark:text-primary-white my-6 text-left">
+        <img src="lucide/bungee-shade/quote-lucide.svg" alt="Quote Icon" class="w-6 h-6 rotate-180">
+        {{text}}
+        <img src="lucide/bungee-shade/quote-lucide.svg" alt="Quote Icon" class="w-6 h-6 transform translate-x-[-20px]">
+      </p>
+
+      <a [href]="downloadFile"
         class="inline-flex items-center px-4 py-2 border border-secondary-white dark:border-transparent text-primary-black dark:text-primary-white bg-transparent dark:bg-secondary-black hover:bg-secondary-white dark:hover:bg-tertiary-black rounded-xl transition-all duration-300 ease-in-out"
         download aria-label="Download Recommendation Letter">
         @if (darkMode$()) {

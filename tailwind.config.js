@@ -16,9 +16,9 @@ module.exports = {
       height: { 68: "17rem" },
       backgroundImage: {
         "text-gradient":
-          "linear-gradient(90deg, #323232 0%, #C09638 25%, #FFBE28 50%, #C09638 75%, #323232 100%)",
+          "linear-gradient(90deg, #0E0E0E 0%, #FFBE28 25%, #FFBE28 50%, #FFBE28 75%, #0E0E0E 100%)",
         "text-gradient-light":
-          "linear-gradient(90deg, #323232 0%, #7b3e33 25%, #7b3e33 50%, #7b3e33 75%, #323232 100%)",
+          "linear-gradient(90deg, #FFF8E4 0%, #7b3e33 25%, #7b3e33 50%, #7b3e33 75%, #FFF8E4 100%)",
       },
     },
   },

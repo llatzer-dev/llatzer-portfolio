@@ -1,11 +1,12 @@
 import { Component, computed, HostBinding, inject, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { HighlightBlurDirective } from '@app/directives/highlight-blur.directive';
 import { DarkmodeService } from '@app/services/darkmode.service';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, HighlightBlurDirective],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.css',
 })

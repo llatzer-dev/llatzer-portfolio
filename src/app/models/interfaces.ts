@@ -45,6 +45,7 @@ export interface Testimonial {
   testimonialPosition: string;
   testimonialFile: string;
   testimonialText: string;
+  isHighlight: boolean;
 }
 
 export interface Blog {
@@ -54,4 +55,5 @@ export interface Blog {
   resume: string;
   tags: string[];
   link: string;
+  isHighlight: boolean;
 }

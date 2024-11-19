@@ -1,11 +1,12 @@
 import { Component, computed, HostBinding, inject } from '@angular/core';
+import { BorderHighlightDirective } from '@app/directives/highlight-border.directive';
 import { Testimonial } from '@app/models/interfaces';
 import { DarkmodeService } from '@app/services/darkmode.service';
 
 @Component({
   selector: 'app-testimonials',
   standalone: true,
-  imports: [],
+  imports: [BorderHighlightDirective],
   templateUrl: './testimonials.component.html',
   styleUrl: './testimonials.component.css',
 })
@@ -23,6 +24,7 @@ export class TestimonialsComponent {
       testimonialFile: 'recommendation-letter.pdf',
       testimonialText:
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo porro, quod, quibusdam voluptatem nisi ut libero nemo aliquam laboriosam consequatur saepe debitis consectetur molestias. Obcaecati maxime mollitia esse libero consequuntur.',
+      isHighlight: false,
     },
     {
       id: 2,
@@ -34,6 +36,7 @@ export class TestimonialsComponent {
       testimonialFile: 'recommendation-letter.pdf',
       testimonialText:
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo porro, quod, quibusdam voluptatem nisi ut libero nemo aliquam laboriosam consequatur saepe debitis consectetur molestias. Obcaecati maxime mollitia esse libero consequuntur.',
+      isHighlight: true,
     },
   ];
 
@@ -48,6 +51,7 @@ export class TestimonialsComponent {
       testimonialFile: 'recommendation-letter.pdf',
       testimonialText:
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo porro, quod, quibusdam voluptatem nisi ut libero nemo aliquam laboriosam consequatur saepe debitis consectetur molestias. Obcaecati maxime mollitia esse libero consequuntur.',
+      isHighlight: false,
     },
     {
       id: 2,
@@ -59,6 +63,7 @@ export class TestimonialsComponent {
       testimonialFile: 'recommendation-letter.pdf',
       testimonialText:
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo porro, quod, quibusdam voluptatem nisi ut libero nemo aliquam laboriosam consequatur saepe debitis consectetur molestias. Obcaecati maxime mollitia esse libero consequuntur.',
+      isHighlight: true,
     },
   ];
 

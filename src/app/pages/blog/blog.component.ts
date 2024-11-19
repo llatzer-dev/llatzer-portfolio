@@ -35,7 +35,7 @@ export class BlogComponent {
     this.blogs = this.blogService.getBlogs();
 
     if (this.darkMode.getDarkMode() && this.isBrowser.checkIfBrowser()) {
-      this.renderer.setStyle(document.body, 'backgroundColor', '#18181b');
+      this.renderer.setStyle(document.body, 'backgroundColor', '#0E0E0E');
     } else {
       this.renderer.setStyle(document.body, 'backgroundColor', '#fff8e4');
     }
