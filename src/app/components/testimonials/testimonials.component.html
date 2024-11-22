@@ -27,22 +27,26 @@
 
     <article appBorderHighlight [isHighlight]="isHighlight"
       class="w-full md:w-1/2 border bg-primary-white dark:bg-transparent border-secondary-white dark:border-tertiary-black rounded-xl p-8">
-      <div class="flex items-center justify-center md:flex md:items-center gap-4">
-        <img [src]="companyIcon" [alt]="companyName + 'Logo'" class="w-16 h-16 rounded-full mb-2 object-contain"
-          [style.backgroundColor]="companyBg">
-        <div class="text-left">
-          <p class="text-secondary-white dark:text-secondary-white">
-            {{position}} at <em> {{companyName}} </em>
-          </p>
-          <p class="text-primary-black dark:text-primary-white font-bold">{{name}}</p>
-        </div>
-      </div>
 
-      <p class="flex gap-4 text-primary-black dark:text-primary-white my-6 text-left">
+      <header class="ml-10">
+        <div class="flex items-center gap-2 mb-4">
+          <img [src]="companyIcon" [alt]="companyName + ' Logo'" class="size-8 rounded-full object-contain"
+            [style.backgroundColor]="companyBg">
+          <p class="text-base font-bold text-primary-black dark:text-primary-white">{{companyName}}</p>
+        </div>
+
+        <div class="text-left">
+          <p class="text-lg font-bold text-primary-black dark:text-primary-white">{{name}}</p>
+          <p class="text-primary-black dark:text-primary-white">{{position}}
+          </p>
+        </div>
+      </header>
+
+      <section class="flex gap-4 text-secondary-white dark:text-secondary-white my-6 text-left text-sm">
         <img src="lucide/bungee-shade/quote-lucide.svg" alt="Quote Icon" class="w-6 h-6 rotate-180">
         {{text}}
-        <img src="lucide/bungee-shade/quote-lucide.svg" alt="Quote Icon" class="w-6 h-6 transform translate-x-[-20px]">
-      </p>
+        <img src="lucide/bungee-shade/quote-lucide.svg" alt="Quote Icon" class="w-6 h-6 transform translate-x-[-18px]">
+      </section>
 
       <a [href]="downloadFile"
         class="inline-flex items-center px-4 py-2 border border-secondary-white dark:border-transparent text-primary-black dark:text-primary-white bg-transparent dark:bg-secondary-black hover:bg-secondary-white dark:hover:bg-tertiary-black rounded-xl transition-all duration-300 ease-in-out"
