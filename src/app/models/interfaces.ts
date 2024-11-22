@@ -34,6 +34,7 @@ export interface Career {
   company: string;
   location: string;
   time: string;
+  details: string[];
 }
 
 export interface Testimonial {

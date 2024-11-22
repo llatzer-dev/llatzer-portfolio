@@ -13,7 +13,10 @@ module.exports = {
         "secondary-white": "#a1a1aa",
         teja: "#7b3e33",
       },
-      height: { 68: "17rem" },
+      height: {
+        68: "17rem",
+        50: "12.5rem",
+      },
       backgroundImage: {
         "text-gradient":
           "linear-gradient(90deg, #0E0E0E 0%, #FFBE28 25%, #FFBE28 50%, #FFBE28 75%, #0E0E0E 100%)",

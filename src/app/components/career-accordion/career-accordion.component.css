@@ -1,0 +1,19 @@
+.transition-max-height {
+  transition: max-height 0.3s ease-in-out;
+}
+
+.max-h-0 {
+  max-height: 0;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.transition-transform {
+  transition: transform 0.3s ease-in-out;
+}

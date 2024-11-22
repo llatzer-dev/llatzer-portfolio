@@ -9,27 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './wrapper-post.component.css',
 })
 export class WrapperPostComponent {
-  project = {
-    title: 'Sample Project',
-    description:
-      'This is a sample project description to demonstrate how to use the component.',
-    icon: 'https://via.placeholder.com/24',
-    url: 'https://example.com',
-    githubUrl: 'https://github.com/example/repository',
-    mainTech: {
-      svelteIcon: 'https://via.placeholder.com/24',
-      url: 'https://technology.com',
-      title: 'Svelte',
-    },
-    tags: ['Angular', 'TypeScript', 'Web'],
-    latest: true,
-    updated: false,
-  };
-
   focused = false;
   position = { x: 0, y: 0 };
   opacity = 0;
-  // Mock data for testing
 
   onMouseMove(event: MouseEvent) {
     if (this.focused) return;

@@ -25,7 +25,7 @@
 
   <section class="flex flex-col gap-4">
     <article>
-      <h3 class="text-xl font-bold text-primary-black dark:text-secondary-white">NTT DATA Europe & Latam - Junior
+      <h3 class="text-xl font-bold text-primary-black dark:text-primary-white">NTT DATA Europe & Latam - Junior
         Developer
       </h3>
       <p appCalculateDuration [startDate]="startDate" [endDate]="endDate"
@@ -54,7 +54,7 @@
     </article>
 
     <article>
-      <h3 class="text-xl font-bold text-primary-black dark:text-secondary-white mt-6">NTT DATA Europe & Latam - Intern
+      <h3 class="text-xl font-bold text-primary-black dark:text-primary-white mt-6">NTT DATA Europe & Latam - Intern
       </h3>
       <p class="text-lg text-primary-black dark:text-secondary-white mb-4">Mar. 2022 - Jun. 2022 · 4 months</p>
       <p class="text-base text-primary-black dark:text-secondary-white mb-4">
@@ -70,6 +70,18 @@
         <li>Developing new functionalities and optimizing existing code in a collaborative environment.</li>
       </ul>
     </article>
+
+    <a href="https://www.linkedin.com/in/lazaro-ortega/"
+      class="w-40 flex items-center justify-center px-4 py-2 bg-teja dark:bg-bungee-shade text-primary-white dark:text-secondary-black font-bold rounded-lg transition-transform duration-200 hover:scale-105"
+      aria-label="Contact Lazaro Ortega on LinkedIn">
+      @if(darkMode$()) {
+      <img src="lucide/black/linkedin-lucide.svg" alt="LinkedIn Icon" class="h-5 w-5 mr-2">
+      }
+      @else {
+      <img src="lucide/linkedin-lucide.svg" alt="LinkedIn Icon" class="h-5 w-5 mr-2">
+      }
+      LinkedIn
+    </a>
   </section>
 
   <div class="flex flex-wrap gap-6 justify-center mb-40 mt-20">

@@ -61,7 +61,7 @@
 }
 
 .dynamic-bar {
-  @apply border border-secondary-white dark:border-none bg-primary-white dark:bg-secondary-black rounded-lg flex justify-center items-center p-2;
+  @apply border border-secondary-white dark:border-tertiary-black bg-primary-white dark:bg-secondary-black rounded-lg flex justify-center items-center p-2;
 }
 
 .dynamic-bar-avatar {
@@ -71,7 +71,7 @@
 }
 
 .dynamic-item {
-  @apply text-primary-white bg-secondary-white dark:bg-tertiary-black rounded-md ml-2 p-1.5 flex overflow-hidden;
+  @apply text-primary-white bg-tertiary-black rounded-md ml-2 p-1.5 flex overflow-hidden;
 }
 
 ._24px {

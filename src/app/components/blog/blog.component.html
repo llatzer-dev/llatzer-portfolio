@@ -16,7 +16,7 @@
     <ul
       class="gap-6 md:gap-12 grid grid-cols-1 md:grid-cols-2 relative {{ darkMode$() ? (blogs().length > 2 ? 'blog-mask' : '')  : (blogs().length > 2 ? 'blog-mask-light' : '') }}">
       @for (blog of blogs(); track blog.id) {
-      <li class="flex w-full flex-col overflow-hidden">
+      <li class="flex w-full flex-col overflow-hidden bg-primary-white dark:bg-transparent">
         <a href="{{blog.link}}" target="_blank">
           <app-wrapper-post>
             <div class="pointer-events-none p-4 flex flex-col justify-between h-full">
@@ -26,10 +26,10 @@
               </div>
               <div class="flex flex-col gap-2">
                 <span class="text-secondary-white">{{blog.resume}}</span>
-                <div class="flex items-center w-full gap-2 flex-wrap">
+                <div class="flex items-center w-full gap-4 flex-wrap">
                   @for (tag of blog.tags; track $index) {
                   <span
-                    class="text-sm px-2 py-1 rounded-md text-primary-white bg-secondary-white dark:bg-tertiary-black">
+                    class="text-sm px-2 py-1 rounded-md text-primary-white bg-tertiary-black dark:bg-tertiary-black">
                     {{tag}}
                   </span>
                   }

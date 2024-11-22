@@ -23,28 +23,7 @@
       Career
     </h3>
 
-    @for (career of careers; track $index) {
-    <div
-      class="flex items-center justify-between px-4 py-2 mb-2 rounded-xl hover:bg-secondary-white hover:bg-opacity-30 dark:hover:bg-opacity-15 transition duration-300 group">
-      <div class="flex flex-col">
-        <div
-          class="text-sm md:text-lg text-primary-black dark:text-primary-white font-bold transition-transform duration-200 transform group-hover:translate-x-1">
-          {{career.position}}
-        </div>
-        <div
-          class="text-sm md:text-lg text-secondary-white dark:text-secondary-white font-bold transition-transform duration-200 transform group-hover:translate-x-1">
-          {{career.company}}
-        </div>
-      </div>
-      <div class="flex-grow mx-4 border-b border-secondary-white hidden md:block"></div>
-      <div class="flex flex-col text-right">
-        <div class="text-sm md:text-lg text-primary-black dark:text-primary-white font-semibold">{{career.location}}
-        </div>
-        <div class="text-sm md:text-lg text-secondary-white dark:text-secondary-white font-semibold ">{{career.time}}
-        </div>
-      </div>
-    </div>
-    }
+    <app-career-accordion [careers]="careers" />
 
     <a routerLink="/career"
       class="flex items-center justify-center w-full py-2 mt-4 focus:ring-2 focus:ring-bungee-shade font-semibold rounded-lg border border-secondary-white dark:border-transparent text-primary-black dark:text-primary-white bg-primary-white dark:bg-secondary-black hover:bg-secondary-white dark:hover:bg-tertiary-black transition-colors duration-300 ease-in-out group">

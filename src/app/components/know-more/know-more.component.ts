@@ -11,11 +11,12 @@ import { DIRECTION, SPEED } from '@app/models/enums';
 import { Career, SkillCategory, Stack } from '@app/models/interfaces';
 import { DarkmodeService } from '@app/services/darkmode.service';
 import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
+import { CareerAccordionComponent } from '../career-accordion/career-accordion.component';
 
 @Component({
   selector: 'app-know-more',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, CareerAccordionComponent],
   templateUrl: './know-more.component.html',
   styleUrls: ['./know-more.component.css'],
 })
@@ -121,6 +122,14 @@ export class KnowMoreComponent implements AfterViewInit {
       company: 'NTTData',
       location: 'Alicante',
       time: '2022-2024',
+      details: [
+        'Part of the Architecture Maintenance team for Zurich, focusing on software architecture and environment maintenance.',
+        'Maintained microservices and backend SOAP WebServices in Java.',
+        'Monitored email inboxes for client and agent communication.',
+        'Ensured JavaBatches for data and report processing.',
+        'Applied fixes in promotional systems using XML Ant and Jenkins.',
+        'Collaborated with teams to resolve issues and participated in Knowledge Transfer meetings.',
+      ],
     },
     {
       id: 2,
@@ -128,6 +137,13 @@ export class KnowMoreComponent implements AfterViewInit {
       company: 'NTTData',
       location: 'Alicante',
       time: '2022-2022',
+      details: [
+        'Contributed to backend development for a major banking client.',
+        'Collaborated on a new frontend application using Angular.',
+        'Developed and maintained applications with Spring Boot and Angular.',
+        'Created REST services and managed database mappings with Hibernate and JPA.',
+        'Performed MySQL queries and optimized existing code.',
+      ],
     },
   ];
 
