@@ -121,7 +121,7 @@ export class KnowMoreComponent implements AfterViewInit {
       position: 'Junior Developer',
       company: 'NTTData',
       location: 'Alicante',
-      time: '2022-2024',
+      time: '2022-Present',
       details: [
         'Part of the Architecture Maintenance team for Zurich, focusing on software architecture and environment maintenance.',
         'Maintained microservices and backend SOAP WebServices in Java.',
