@@ -147,7 +147,7 @@ export class KnowMoreComponent implements AfterViewInit {
     },
   ];
 
-  private scrollTimeout: any;
+  private scrollTimeout: NodeJS.Timeout | string | number | undefined;
 
   protected readonly darkMode$ = computed(() => this.darkMode.getDarkMode());
 
@@ -193,7 +193,7 @@ export class KnowMoreComponent implements AfterViewInit {
   }
 
   addAnimation(scrollers: NodeListOf<Element>) {
-    scrollers.forEach((scroller) => {
+    scrollers.forEach(scroller => {
       // Add data-animated="true" to every `.scroller`
       scroller.setAttribute('data-animated', 'true');
 
@@ -202,7 +202,7 @@ export class KnowMoreComponent implements AfterViewInit {
       const scrollerContent = Array.from(scrollerInner?.children || []);
 
       // For each item in the array, clone it and append it
-      scrollerContent.forEach((item) => {
+      scrollerContent.forEach(item => {
         const duplicatedItem = item.cloneNode(true) as HTMLElement;
         duplicatedItem.setAttribute('aria-hidden', 'true');
         scrollerInner?.appendChild(duplicatedItem);
@@ -212,13 +212,13 @@ export class KnowMoreComponent implements AfterViewInit {
 
   // Updated function to handle hover
   addHoverListeners(scrollers: NodeListOf<Element>) {
-    scrollers.forEach((scroller) => {
+    scrollers.forEach(scroller => {
       const listItems = scroller.querySelectorAll('.tag-list li');
       const scrollerInner = scroller.querySelector(
         '.scroller__inner'
       ) as HTMLElement;
 
-      listItems.forEach((item) => {
+      listItems.forEach(item => {
         item.addEventListener('mouseenter', () => {
           // Change the animation state to paused
           scrollerInner.style.animationPlayState = 'paused';

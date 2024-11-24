@@ -4,6 +4,7 @@ import {
   HostBinding,
   inject,
   Renderer2,
+  OnInit,
 } from '@angular/core';
 import { DarkmodeService } from '@app/services/darkmode.service';
 import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
@@ -15,7 +16,7 @@ import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.css',
 })
-export class AboutMeComponent {
+export class AboutMeComponent implements OnInit {
   public darkMode = inject(DarkmodeService);
   private renderer = inject(Renderer2);
   private isBrowser = inject(CheckPlatformUtility);

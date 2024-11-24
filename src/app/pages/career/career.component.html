@@ -1,125 +1,181 @@
-<section class="min-h-screen max-w-2xl mx-auto text-primary-white px-4 mt-6">
+<section class="mx-auto mt-6 min-h-screen max-w-2xl px-4 text-primary-white">
   <p class="text-lg text-secondary-white">Home / Career</p>
 
-  <a class="text-primary-black dark:text-primary-white flex items-center font-bold text-xl text-left mb-6 py-2"
+  <a
+    class="mb-6 flex items-center py-2 text-left text-xl font-bold text-primary-black dark:text-primary-white"
     href="/">
     @if (darkMode$()) {
-    <img src="lucide/arrow-left-lucide.svg" alt="Arrow Left Icon" class="h-5 w-5 mr-2">
-    }
-    @else {
-    <img src="lucide/black/arrow-left-lucide.svg" alt="Arrow Left Icon" class="h-5 w-5 mr-2">
+      <img
+        src="lucide/arrow-left-lucide.svg"
+        alt="Arrow Left Icon"
+        class="mr-2 h-5 w-5" />
+    } @else {
+      <img
+        src="lucide/black/arrow-left-lucide.svg"
+        alt="Arrow Left Icon"
+        class="mr-2 h-5 w-5" />
     }
     Go Home
   </a>
 
-  <div class="flex items-center mb-6">
+  <div class="mb-6 flex items-center">
     @if (darkMode$()) {
-    <img src="lucide/bungee-shade/briefcase-lucide.svg" alt="Career Icon" class="h-8 w-8 mr-4">
-    }
-    @else {
-    <img src="lucide/teja/briefcase-lucide.svg" alt="Career Icon" class="h-8 w-8 mr-4">
+      <img
+        src="lucide/bungee-shade/briefcase-lucide.svg"
+        alt="Career Icon"
+        class="mr-4 h-8 w-8" />
+    } @else {
+      <img
+        src="lucide/teja/briefcase-lucide.svg"
+        alt="Career Icon"
+        class="mr-4 h-8 w-8" />
     }
     <h1 class="text-4xl font-bold text-teja dark:text-bungee-shade">Career</h1>
   </div>
 
-
   <section class="flex flex-col gap-4">
     <article>
-      <h3 class="text-xl font-bold text-primary-black dark:text-primary-white">NTT DATA Europe & Latam - Junior
-        Developer
+      <h3 class="text-xl font-bold text-primary-black dark:text-primary-white">
+        NTT DATA Europe & Latam - Junior Developer
       </h3>
-      <p appCalculateDuration [startDate]="startDate" [endDate]="endDate"
-        class="text-lg text-primary-black dark:text-secondary-white mb-4">
+      <p
+        appCalculateDuration
+        [startDate]="startDate"
+        [endDate]="endDate"
+        class="mb-4 text-lg text-primary-black dark:text-secondary-white">
         Nov. 2022 - Present ·
       </p>
-      <p class="text-base text-primary-black dark:text-secondary-white mb-4">
-        I am part of the <strong>Architecture Maintenance</strong> team for Zurich, an insurance client, where my role
-        focuses
-        on software architecture and maintaining productive and non-productive environments. This position emphasizes
-        prioritizing client-assigned tasks and maintaining continuous communication to resolve incidents efficiently.
+      <p class="mb-4 text-base text-primary-black dark:text-secondary-white">
+        I am part of the <strong>Architecture Maintenance</strong> team for
+        Zurich, an insurance client, where my role focuses on software
+        architecture and maintaining productive and non-productive environments.
+        This position emphasizes prioritizing client-assigned tasks and
+        maintaining continuous communication to resolve incidents efficiently.
       </p>
-      <ul class="text-base text-primary-black dark:text-secondary-white list-disc list-inside mb-4 space-y-2">
-        <li>Maintenance of microservices applications and backend SOAP WebServices in Java.</li>
-        <li>Monitoring email inboxes to facilitate communication with clients, agents, and insurance mediators.</li>
-        <li>Ensuring the operation of automatic JavaBatches for data, email, and file processing, along with report
-          generation.</li>
-        <li>Applying fixes in promotional systems using XML Ant and Jenkins in non-production environments.</li>
-        <li>Maintaining close collaboration with various teams to address issues, especially in cases with insufficient
-          client
-          documentation.</li>
-        <li>Participating in Knowledge Transfer meetings with development teams to review production projects and
-          address
-          maintenance issues.</li>
+      <ul
+        class="mb-4 list-inside list-disc space-y-2 text-base text-primary-black dark:text-secondary-white">
+        <li>
+          Maintenance of microservices applications and backend SOAP WebServices
+          in Java.
+        </li>
+        <li>
+          Monitoring email inboxes to facilitate communication with clients,
+          agents, and insurance mediators.
+        </li>
+        <li>
+          Ensuring the operation of automatic JavaBatches for data, email, and
+          file processing, along with report generation.
+        </li>
+        <li>
+          Applying fixes in promotional systems using XML Ant and Jenkins in
+          non-production environments.
+        </li>
+        <li>
+          Maintaining close collaboration with various teams to address issues,
+          especially in cases with insufficient client documentation.
+        </li>
+        <li>
+          Participating in Knowledge Transfer meetings with development teams to
+          review production projects and address maintenance issues.
+        </li>
       </ul>
     </article>
 
     <article>
-      <h3 class="text-xl font-bold text-primary-black dark:text-primary-white mt-6">NTT DATA Europe & Latam - Intern
+      <h3
+        class="mt-6 text-xl font-bold text-primary-black dark:text-primary-white">
+        NTT DATA Europe & Latam - Intern
       </h3>
-      <p class="text-lg text-primary-black dark:text-secondary-white mb-4">Mar. 2022 - Jun. 2022 · 4 months</p>
-      <p class="text-base text-primary-black dark:text-secondary-white mb-4">
-        During my internship, I contributed to the development, enhancement, and modification of backend applications in
-        Java for a major banking client. This role also allowed me to collaborate on creating a new frontend application
-        using Angular, where I strengthened skills in:
+      <p class="mb-4 text-lg text-primary-black dark:text-secondary-white">
+        Mar. 2022 - Jun. 2022 · 4 months
       </p>
-      <ul class="text-base text-primary-black dark:text-secondary-white list-disc list-inside mb-4 space-y-2">
-        <li>Developing and maintaining banking applications with Spring Boot for backend and Angular for frontend.</li>
+      <p class="mb-4 text-base text-primary-black dark:text-secondary-white">
+        During my internship, I contributed to the development, enhancement, and
+        modification of backend applications in Java for a major banking client.
+        This role also allowed me to collaborate on creating a new frontend
+        application using Angular, where I strengthened skills in:
+      </p>
+      <ul
+        class="mb-4 list-inside list-disc space-y-2 text-base text-primary-black dark:text-secondary-white">
+        <li>
+          Developing and maintaining banking applications with Spring Boot for
+          backend and Angular for frontend.
+        </li>
         <li>Creating and modifying REST services with Spring Boot.</li>
         <li>Data mapping in databases using Hibernate, JPA, and Lombok.</li>
         <li>Performing queries and updates in MySQL databases.</li>
-        <li>Developing new functionalities and optimizing existing code in a collaborative environment.</li>
+        <li>
+          Developing new functionalities and optimizing existing code in a
+          collaborative environment.
+        </li>
       </ul>
     </article>
 
-    <a href="https://www.linkedin.com/in/lazaro-ortega/"
-      class="w-40 flex items-center justify-center px-4 py-2 bg-teja dark:bg-bungee-shade text-primary-white dark:text-secondary-black font-bold rounded-lg transition-transform duration-200 hover:scale-105"
+    <a
+      href="https://www.linkedin.com/in/lazaro-ortega/"
+      class="flex w-40 items-center justify-center rounded-lg bg-teja px-4 py-2 font-bold text-primary-white transition-transform duration-200 hover:scale-105 dark:bg-bungee-shade dark:text-secondary-black"
       aria-label="Contact Lazaro Ortega on LinkedIn">
-      @if(darkMode$()) {
-      <img src="lucide/black/linkedin-lucide.svg" alt="LinkedIn Icon" class="h-5 w-5 mr-2">
-      }
-      @else {
-      <img src="lucide/linkedin-lucide.svg" alt="LinkedIn Icon" class="h-5 w-5 mr-2">
+      @if (darkMode$()) {
+        <img
+          src="lucide/black/linkedin-lucide.svg"
+          alt="LinkedIn Icon"
+          class="mr-2 h-5 w-5" />
+      } @else {
+        <img
+          src="lucide/linkedin-lucide.svg"
+          alt="LinkedIn Icon"
+          class="mr-2 h-5 w-5" />
       }
       LinkedIn
     </a>
   </section>
 
-  <div class="flex flex-wrap gap-6 justify-center mb-40 mt-20">
+  <div class="mb-40 mt-20 flex flex-wrap justify-center gap-6">
     <h2
-      class="text-5xl md:text-9xl font-bold text-primary-black dark:text-secondary-white flex items-center justify-center mb-4 px-4 py-2">
+      class="mb-4 flex items-center justify-center px-4 py-2 text-5xl font-bold text-primary-black dark:text-secondary-white md:text-9xl">
       <span class="text-center">See more</span>
-      <span class="text-teja dark:text-bungee-shade ml-2">.</span>
+      <span class="ml-2 text-teja dark:text-bungee-shade">.</span>
     </h2>
 
-    <ul class="gap-4 grid grid-cols-1 md:grid-cols-2 w-full">
-      <li class="flex flex-col w-full">
-        <a href="/blog" class="focus:ring-2 focus:ring-bungee-shade rounded-lg transition">
+    <ul class="grid w-full grid-cols-1 gap-4 md:grid-cols-2">
+      <li class="flex w-full flex-col">
+        <a
+          href="/blog"
+          class="rounded-lg transition focus:ring-2 focus:ring-bungee-shade">
           <div
-            class="flex items-center gap-2 justify-center w-full py-3 font-semibold border border-secondary-white dark:border-none text-primary-black dark:text-white bg-primary-white dark:bg-secondary-black rounded-lg shadow-md transition-all duration-300 ease-in-out hover:bg-secondary-white dark:hover:bg-tertiary-black hover:shadow-lg">
+            class="flex w-full items-center justify-center gap-2 rounded-lg border border-secondary-white bg-primary-white py-3 font-semibold text-primary-black shadow-md transition-all duration-300 ease-in-out hover:bg-secondary-white hover:shadow-lg dark:border-none dark:bg-secondary-black dark:text-white dark:hover:bg-tertiary-black">
             @if (darkMode$()) {
-            <img src="lucide/bungee-shade/notepad-text-lucide.svg" alt="Blog Icon"
-              class="h-5 w-5 ml-1 transition-transform duration-200">
-            }
-            @else {
-            <img src="lucide/teja/notepad-text-lucide.svg" alt="Blog Icon"
-              class="h-5 w-5 ml-1 transition-transform duration-200">
+              <img
+                src="lucide/bungee-shade/notepad-text-lucide.svg"
+                alt="Blog Icon"
+                class="ml-1 h-5 w-5 transition-transform duration-200" />
+            } @else {
+              <img
+                src="lucide/teja/notepad-text-lucide.svg"
+                alt="Blog Icon"
+                class="ml-1 h-5 w-5 transition-transform duration-200" />
             }
             Blog
           </div>
         </a>
       </li>
 
-      <li class="flex flex-col w-full">
-        <a href="/about-me" class="focus:ring-2 focus:ring-bungee-shade rounded-lg transition">
+      <li class="flex w-full flex-col">
+        <a
+          href="/about-me"
+          class="rounded-lg transition focus:ring-2 focus:ring-bungee-shade">
           <div
-            class="flex items-center gap-2 justify-center w-full py-3 font-semibold border border-secondary-white dark:border-none text-primary-black dark:text-white bg-primary-white dark:bg-secondary-black rounded-lg shadow-md transition-all duration-300 ease-in-out hover:bg-secondary-white dark:hover:bg-tertiary-black hover:shadow-lg">
+            class="flex w-full items-center justify-center gap-2 rounded-lg border border-secondary-white bg-primary-white py-3 font-semibold text-primary-black shadow-md transition-all duration-300 ease-in-out hover:bg-secondary-white hover:shadow-lg dark:border-none dark:bg-secondary-black dark:text-white dark:hover:bg-tertiary-black">
             @if (darkMode$()) {
-            <img src="lucide/bungee-shade/map-pin.svg" alt="About me Icon"
-              class="h-5 w-5 ml-1 transition-transform duration-200">
-            }
-            @else {
-            <img src="lucide/teja/map-pin.svg" alt="About me Icon"
-              class="h-5 w-5 ml-1 transition-transform duration-200">
+              <img
+                src="lucide/bungee-shade/map-pin.svg"
+                alt="About me Icon"
+                class="ml-1 h-5 w-5 transition-transform duration-200" />
+            } @else {
+              <img
+                src="lucide/teja/map-pin.svg"
+                alt="About me Icon"
+                class="ml-1 h-5 w-5 transition-transform duration-200" />
             }
             About me
           </div>

@@ -2,94 +2,137 @@
 
 <section id="hero" role="banner">
   @if (isOldHero) {
-  <div class="flex flex-col md:flex-row items-center justify-center mt-8 p-6 md:p-12 rounded-xl">
-    <img src="Logo-Llatzer.webp" alt="Logo of Lazaro Ortega, full-stack developer"
-      class="aspect-square w-1/2 md:w-1/4 rounded-full mr-0 md:mr-8 mb-4 md:mb-0">
-    <div class="text-center md:text-left">
-      <h1 class="text-4xl md:text-5xl mb-5 font-bold text-primary-white">FullStack Developer</h1>
-      <h2 class="text-xl md:text-2xl mb-2 text-secondary-white font-semibold">+2 years of experience.</h2>
-      <h3 class="text-lg md:text-lg text-secondary-white w-full md:w-96">
+    <div
+      class="mt-8 flex flex-col items-center justify-center rounded-xl p-6 md:flex-row md:p-12">
+      <img
+        src="Logo-Llatzer.webp"
+        alt="Logo of Lazaro Ortega, full-stack developer"
+        class="mb-4 mr-0 aspect-square w-1/2 rounded-full md:mb-0 md:mr-8 md:w-1/4" />
+      <div class="text-center md:text-left">
+        <h1 class="mb-5 text-4xl font-bold text-primary-white md:text-5xl">
+          FullStack Developer
+        </h1>
+        <h2 class="mb-2 text-xl font-semibold text-secondary-white md:text-2xl">
+          +2 years of experience.
+        </h2>
+        <h3 class="w-full text-lg text-secondary-white md:w-96 md:text-lg">
+          Specialized in <strong>Angular</strong> and <strong>Java</strong>,
+          from Alicante, Spain ES.
+          <a
+            routerLink="/add-edit-character"
+            role="button"
+            class="group relative inline-flex items-center rounded-lg text-primary-white"
+            aria-label="Learn more about Lazaro Ortega">
+            More about me
+            <img
+              src="lucide/arrow-up-right-lucide.svg"
+              alt="More about me Icon"
+              class="h-6 w-6 transform opacity-40 transition duration-200 group-hover:translate-x-1 group-hover:opacity-100" />
+            <span
+              class="absolute bottom-0 left-0 w-full border-b border-dashed text-primary-white opacity-0 transition duration-300 group-hover:opacity-100"></span>
+          </a>
+        </h3>
+        <div
+          class="mt-12 flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
+          <a
+            href="https://www.linkedin.com/in/lazaro-ortega/"
+            class="inline-flex items-center justify-center rounded-lg bg-bungee-shade px-4 py-2 font-bold text-secondary-black transition-transform duration-300 hover:scale-105"
+            aria-label="Contact Lazaro Ortega on LinkedIn">
+            <img
+              src="lucide/black/linkedin-lucide.svg"
+              alt="LinkedIn Icon"
+              class="mr-2 h-5 w-5" />
+            LinkedIn
+          </a>
+          <a
+            href="CV_Lazaro_Ortega_Boix.pdf"
+            download
+            class="inline-flex items-center justify-center rounded-lg bg-secondary-black px-4 py-2 text-primary-white transition-transform duration-300 hover:scale-105"
+            aria-label="Download curriculum vitae">
+            <img
+              src="lucide/file-user-lucide.svg"
+              alt="Curriculum Icon"
+              class="mr-2 h-5 w-5" />
+            Curriculum
+          </a>
+        </div>
+      </div>
+    </div>
+  } @else {
+    <div
+      class="mt-8 flex flex-col items-center justify-center rounded-xl text-center">
+      <div class="relative mb-8" appHighlightBlur>
+        <h1
+          class="relative mb-5 bg-text-gradient-light bg-clip-text text-3xl font-bold text-transparent dark:bg-text-gradient md:text-6xl">
+          FullStack Developer
+        </h1>
+      </div>
+      <h2
+        class="mb-6 text-2xl font-semibold dark:text-primary-white md:text-4xl">
+        +2 years of experience.
+      </h2>
+      <h3 class="text-lg dark:text-secondary-white md:w-72">
         Specialized in <strong>Angular</strong> and <strong>Java</strong>, from
         Alicante, Spain ES.
-        <a routerLink="/add-edit-character" role="button"
-          class="items-center inline-flex text-primary-white rounded-lg group relative"
-          aria-label="Learn more about Lazaro Ortega">
-          More about me
-          <img src="lucide/arrow-up-right-lucide.svg" alt="More about me Icon"
-            class="h-6 w-6 opacity-40 transition duration-200 transform group-hover:opacity-100 group-hover:translate-x-1">
-          <span
-            class="absolute bottom-0 left-0 w-full border-b border-dashed text-primary-white opacity-0 group-hover:opacity-100 transition duration-300"></span>
-        </a>
       </h3>
-      <div class="mt-12 flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
-        <a href="https://www.linkedin.com/in/lazaro-ortega/"
-          class="inline-flex items-center justify-center px-4 py-2 bg-bungee-shade text-secondary-black font-bold rounded-lg transition-transform duration-300 hover:scale-105"
+      <a
+        routerLink="/about-me"
+        role="button"
+        class="group relative mt-4 inline-flex items-center rounded-lg dark:text-primary-white"
+        aria-label="Learn more about Lazaro Ortega">
+        More about me
+        @if (darkMode$()) {
+          <img
+            src="lucide/arrow-up-right-lucide.svg"
+            alt="More about me Icon"
+            class="ml-1 h-3 w-3 transform opacity-40 transition duration-200 group-hover:translate-x-1 group-hover:opacity-100" />
+        } @else {
+          <img
+            src="lucide/black/arrow-up-right-lucide.svg"
+            alt="More about me Icon"
+            class="h-3 w-3 transform opacity-40 transition duration-200 group-hover:translate-x-1 group-hover:opacity-100" />
+        }
+        <span
+          class="absolute bottom-0 left-0 w-full border-b border-dashed opacity-0 transition duration-300 group-hover:opacity-100 dark:border-bungee-shade"></span>
+      </a>
+      <div
+        class="mt-12 flex w-full flex-col space-y-4 md:flex-row md:justify-center md:space-x-4 md:space-y-0">
+        <a
+          href="https://www.linkedin.com/in/lazaro-ortega/"
+          class="flex w-full flex-grow items-center justify-center rounded-lg bg-teja px-4 py-2 font-bold text-primary-white transition-transform duration-200 hover:scale-105 dark:bg-bungee-shade dark:text-secondary-black md:w-auto md:flex-grow-0"
           aria-label="Contact Lazaro Ortega on LinkedIn">
-          <img src="lucide/black/linkedin-lucide.svg" alt="LinkedIn Icon" class="h-5 w-5 mr-2">
+          @if (darkMode$()) {
+            <img
+              src="lucide/black/linkedin-lucide.svg"
+              alt="LinkedIn Icon"
+              class="mr-2 h-5 w-5" />
+          } @else {
+            <img
+              src="lucide/linkedin-lucide.svg"
+              alt="LinkedIn Icon"
+              class="mr-2 h-5 w-5" />
+          }
           LinkedIn
         </a>
-        <a href="CV_Lazaro_Ortega_Boix.pdf" download
-          class="inline-flex items-center justify-center px-4 py-2 bg-secondary-black text-primary-white rounded-lg transition-transform duration-300 hover:scale-105"
+        <a
+          href="CV_Lazaro_Ortega_Boix.pdf"
+          download
+          class="flex w-full flex-grow items-center justify-center rounded-lg border border-secondary-white bg-primary-white px-4 py-2 font-bold text-primary-black transition-transform duration-200 hover:scale-105 dark:border-none dark:bg-secondary-black dark:font-normal dark:text-primary-white md:w-auto md:flex-grow-0"
           aria-label="Download curriculum vitae">
-          <img src="lucide/file-user-lucide.svg" alt="Curriculum Icon" class="h-5 w-5 mr-2">
+          @if (darkMode$()) {
+            <img
+              src="lucide/file-user-lucide.svg"
+              alt="Curriculum Icon"
+              class="mr-2 h-5 w-5" />
+          } @else {
+            <img
+              src="lucide/black/file-user-lucide.svg"
+              alt="Curriculum Icon"
+              class="mr-2 h-5 w-5" />
+          }
           Curriculum
         </a>
       </div>
     </div>
-  </div>
-  }
-
-  @else {
-  <div class="flex flex-col items-center justify-center mt-8 rounded-xl text-center">
-    <div class="relative mb-8" appHighlightBlur>
-      <h1
-        class="relative text-3xl md:text-6xl mb-5 font-bold bg-text-gradient-light dark:bg-text-gradient bg-clip-text text-transparent">
-        FullStack Developer
-      </h1>
-    </div>
-    <h2 class="text-2xl md:text-4xl mb-6 dark:text-primary-white font-semibold">+2 years of experience.</h2>
-    <h3 class="text-lg dark:text-secondary-white md:w-72">
-      Specialized in <strong>Angular</strong> and <strong>Java</strong>, from Alicante, Spain ES.
-    </h3>
-    <a routerLink="/about-me" role="button"
-      class="mt-4 items-center inline-flex dark:text-primary-white rounded-lg group relative"
-      aria-label="Learn more about Lazaro Ortega">
-      More about me
-      @if(darkMode$()) {
-      <img src="lucide/arrow-up-right-lucide.svg" alt="More about me Icon"
-        class="h-3 w-3 ml-1 opacity-40 transition duration-200 transform group-hover:opacity-100 group-hover:translate-x-1">
-      }
-      @else {
-      <img src="lucide/black/arrow-up-right-lucide.svg" alt="More about me Icon"
-        class="h-3 w-3 opacity-40 transition duration-200 transform group-hover:opacity-100 group-hover:translate-x-1">
-      }
-      <span
-        class="absolute bottom-0 left-0 w-full border-b border-dashed dark:border-bungee-shade opacity-0 group-hover:opacity-100 transition duration-300"></span>
-    </a>
-    <div class="mt-12 flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 w-full md:justify-center">
-      <a href="https://www.linkedin.com/in/lazaro-ortega/"
-        class="flex-grow md:flex-grow-0 flex items-center justify-center px-4 py-2 bg-teja dark:bg-bungee-shade text-primary-white dark:text-secondary-black font-bold rounded-lg transition-transform duration-200 hover:scale-105 w-full md:w-auto"
-        aria-label="Contact Lazaro Ortega on LinkedIn">
-        @if(darkMode$()) {
-        <img src="lucide/black/linkedin-lucide.svg" alt="LinkedIn Icon" class="h-5 w-5 mr-2">
-        }
-        @else {
-        <img src="lucide/linkedin-lucide.svg" alt="LinkedIn Icon" class="h-5 w-5 mr-2">
-        }
-        LinkedIn
-      </a>
-      <a href="CV_Lazaro_Ortega_Boix.pdf" download
-        class="flex-grow md:flex-grow-0 flex items-center justify-center px-4 py-2 bg-primary-white dark:bg-secondary-black text-primary-black dark:text-primary-white rounded-lg transition-transform duration-200 hover:scale-105 w-full md:w-auto border border-secondary-white dark:border-none font-bold dark:font-normal"
-        aria-label="Download curriculum vitae">
-        @if(darkMode$()) {
-        <img src="lucide/file-user-lucide.svg" alt="Curriculum Icon" class="h-5 w-5 mr-2">
-        }
-        @else {
-        <img src="lucide/black/file-user-lucide.svg" alt="Curriculum Icon" class="h-5 w-5 mr-2">
-        }
-        Curriculum
-      </a>
-    </div>
-  </div>
   }
 </section>

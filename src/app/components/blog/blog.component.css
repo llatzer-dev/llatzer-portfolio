@@ -4,7 +4,7 @@
 }
 
 .blog-mask:before {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 75%; /* Increase the height of the blur for a better transition */
@@ -20,7 +20,7 @@
 }
 
 .blog-mask-light:before {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 75%; /* Increase the height of the blur for a better transition */

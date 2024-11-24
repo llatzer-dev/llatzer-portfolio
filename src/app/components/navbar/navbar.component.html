@@ -1,41 +1,54 @@
-<nav id="navbar" aria-label="Main navigation"
-  class="flex flex-col md:flex-row items-center justify-between p-4 border border-secondary-white dark:border-tertiary-black bg-primary-white dark:bg-secondary-black rounded-xl mt-4">
+<nav
+  id="navbar"
+  aria-label="Main navigation"
+  class="mt-4 flex flex-col items-center justify-between rounded-xl border border-secondary-white bg-primary-white p-4 dark:border-tertiary-black dark:bg-secondary-black md:flex-row">
   <div
-    class="flex flex-row-reverse justify-between w-full md:w-auto md:flex-row items-center space-x-4 mb-4 md:mb-0 pl-2 pr-6 md:p-0">
-    <img src="Logo-Llatzer.webp" alt="Logo" class="w-10 h-auto rounded-lg">
+    class="mb-4 flex w-full flex-row-reverse items-center justify-between space-x-4 pl-2 pr-6 md:mb-0 md:w-auto md:flex-row md:p-0">
+    <img src="Logo-Llatzer.webp" alt="Logo" class="h-auto w-10 rounded-lg" />
     <div class="flex flex-col">
-      <p class="text-3xl text-teja dark:text-bungee-shade font-bold">Lazaro Ortega</p>
-      <p class="text-lg dark:text-secondary-white font-semibold">FullStack Developer</p>
+      <p class="text-3xl font-bold text-teja dark:text-bungee-shade">
+        Lazaro Ortega
+      </p>
+      <p class="text-lg font-semibold dark:text-secondary-white">
+        FullStack Developer
+      </p>
     </div>
   </div>
   <ul class="flex flex-row items-center space-x-2">
     <li>
-      <button (click)="setDarkMode()"
-        class="flex items-center justify-center border border-secondary-white dark:border-none text-primary-white rounded-xl overflow-hidden transition-colors duration-300">
-        @if(!darkMode$()) {
-        <span
-          class="dark:border-none bg-primary-white dark:bg-tertiary-black text-primary-white px-4 py-2 transition-transform duration-300 hover:scale-125">
-          <img src="sun.svg" alt="Light Mode Icon" class="h-5 w-5">
-        </span>
-        }
-        @else {
-        <span
-          class="bg-primary-white dark:bg-tertiary-black px-4 py-2 transition-transform duration-300 hover:scale-125">
-          <img src="moon.svg" alt="Moon Mode Icon" class="h-5 w-5">
-        </span>
+      <button
+        (click)="setDarkMode()"
+        class="flex items-center justify-center overflow-hidden rounded-xl border border-secondary-white text-primary-white transition-colors duration-300 dark:border-none">
+        @if (!darkMode$()) {
+          <span
+            class="bg-primary-white px-4 py-2 text-primary-white transition-transform duration-300 hover:scale-125 dark:border-none dark:bg-tertiary-black">
+            <img src="sun.svg" alt="Light Mode Icon" class="h-5 w-5" />
+          </span>
+        } @else {
+          <span
+            class="bg-primary-white px-4 py-2 transition-transform duration-300 hover:scale-125 dark:bg-tertiary-black">
+            <img src="moon.svg" alt="Moon Mode Icon" class="h-5 w-5" />
+          </span>
         }
       </button>
     </li>
     <li>
-      <a href="#letstalk"
-        class="flex items-center justify-center bg-teja dark:bg-bungee-shade text-primary-white dark:text-secondary-black rounded-xl overflow-hidden transition-colors duration-300">
-        <span class="flex items-center font-semibold transition-transform duration-300 hover:scale-110 py-2 px-4">
+      <a
+        href="#letstalk"
+        class="flex items-center justify-center overflow-hidden rounded-xl bg-teja text-primary-white transition-colors duration-300 dark:bg-bungee-shade dark:text-secondary-black">
+        <span
+          class="flex items-center px-4 py-2 font-semibold transition-transform duration-300 hover:scale-110">
           Let's Talk
-          @if(!darkMode$()) {
-          <img src="lucide/arrow-up-right-lucide.svg" alt="Arrow Up Right Icon" class="h-5 w-5">
-          }
-          @else {
-          <img src="lucide/black/arrow-up-right-lucide.svg" alt="Arrow Up Right Icon" class="h-5 w-5">
+          @if (!darkMode$()) {
+            <img
+              src="lucide/arrow-up-right-lucide.svg"
+              alt="Arrow Up Right Icon"
+              class="h-5 w-5" />
+          } @else {
+            <img
+              src="lucide/black/arrow-up-right-lucide.svg"
+              alt="Arrow Up Right Icon"
+              class="h-5 w-5" />
           }
         </span>
       </a>

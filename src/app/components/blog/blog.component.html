@@ -1,47 +1,67 @@
 @if (blogs().length > 0) {
-<section id="blog" class="mt-4">
-  <h2
-    class="text-3xl md:text-5xl font-bold text-primary-black dark:text-secondary-white flex items-center justify-center mb-12">
-    @if (darkMode$()) {
-    <img src="lucide/bungee-shade/notepad-text-lucide.svg" alt="Blog Icon" class="w-8 h-8 md:w-12 md:h-12 mr-2">
-    }
-    @else {
-    <img src="lucide/teja/notepad-text-lucide.svg" alt="Blog Icon" class="w-8 h-8 md:w-12 md:h-12 mr-2">
-    }
-    <span class="text-center">Blog</span>
-    <span class="text-teja dark:text-bungee-shade ml-2">.</span>
-  </h2>
-
-  <div class="flex flex-wrap gap-6 overflow-hidden">
-    <ul
-      class="gap-6 md:gap-12 grid grid-cols-1 md:grid-cols-2 relative {{ darkMode$() ? (blogs().length > 2 ? 'blog-mask' : '')  : (blogs().length > 2 ? 'blog-mask-light' : '') }}">
-      @for (blog of blogs(); track blog.id) {
-      <li class="flex w-full flex-col overflow-hidden bg-primary-white dark:bg-transparent">
-        <a href="{{blog.link}}" target="_blank">
-          <app-wrapper-post>
-            <div class="pointer-events-none p-4 flex flex-col justify-between h-full">
-              <div class="flex flex-col gap-2">
-                <span class="text-primary-black dark:text-primary-white text-lg"><strong>{{blog.name}}</strong></span>
-                <span class="text-sm text-primary-black dark:text-primary-white opacity-50">{{blog.date}}</span>
-              </div>
-              <div class="flex flex-col gap-2">
-                <span class="text-secondary-white">{{blog.resume}}</span>
-                <div class="flex items-center w-full gap-4 flex-wrap">
-                  @for (tag of blog.tags; track $index) {
-                  <span
-                    class="text-sm px-2 py-1 rounded-md text-primary-white bg-tertiary-black dark:bg-tertiary-black">
-                    {{tag}}
-                  </span>
-                  }
-                </div>
-              </div>
-            </div>
-          </app-wrapper-post>
-        </a>
-      </li>
+  <section id="blog" class="mt-4">
+    <h2
+      class="mb-12 flex items-center justify-center text-3xl font-bold text-primary-black dark:text-secondary-white md:text-5xl">
+      @if (darkMode$()) {
+        <img
+          src="lucide/bungee-shade/notepad-text-lucide.svg"
+          alt="Blog Icon"
+          class="mr-2 h-8 w-8 md:h-12 md:w-12" />
+      } @else {
+        <img
+          src="lucide/teja/notepad-text-lucide.svg"
+          alt="Blog Icon"
+          class="mr-2 h-8 w-8 md:h-12 md:w-12" />
       }
-    </ul>
+      <span class="text-center">Blog</span>
+      <span class="ml-2 text-teja dark:text-bungee-shade">.</span>
+    </h2>
 
-  </div>
-</section>
+    <div class="flex flex-wrap gap-6 overflow-hidden">
+      <ul
+        class="gap-6 md:gap-12 grid grid-cols-1 md:grid-cols-2 relative {{
+          darkMode$()
+            ? blogs().length > 2
+              ? 'blog-mask'
+              : ''
+            : blogs().length > 2
+              ? 'blog-mask-light'
+              : ''
+        }}">
+        @for (blog of blogs(); track blog.id) {
+          <li
+            class="flex w-full flex-col overflow-hidden bg-primary-white dark:bg-transparent">
+            <a href="{{ blog.link }}" target="_blank">
+              <app-wrapper-post>
+                <div
+                  class="pointer-events-none flex h-full flex-col justify-between p-4">
+                  <div class="flex flex-col gap-2">
+                    <span
+                      class="text-lg text-primary-black dark:text-primary-white"
+                      ><strong>{{ blog.name }}</strong></span
+                    >
+                    <span
+                      class="text-sm text-primary-black opacity-50 dark:text-primary-white"
+                      >{{ blog.date }}</span
+                    >
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <span class="text-secondary-white">{{ blog.resume }}</span>
+                    <div class="flex w-full flex-wrap items-center gap-4">
+                      @for (tag of blog.tags; track $index) {
+                        <span
+                          class="rounded-md bg-tertiary-black px-2 py-1 text-sm text-primary-white dark:bg-tertiary-black">
+                          {{ tag }}
+                        </span>
+                      }
+                    </div>
+                  </div>
+                </div>
+              </app-wrapper-post>
+            </a>
+          </li>
+        }
+      </ul>
+    </div>
+  </section>
 }

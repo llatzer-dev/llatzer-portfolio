@@ -2,7 +2,6 @@ import {
   Directive,
   ElementRef,
   input,
-  Input,
   OnChanges,
   Renderer2,
   SimpleChanges,
@@ -16,7 +15,10 @@ export class CalculateDurationDirective implements OnChanges {
   public startDate = input.required<Date>();
   public endDate = input.required<Date>();
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(
+    private el: ElementRef,
+    private renderer: Renderer2
+  ) {}
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['startDate'] || changes['endDate']) {

@@ -77,6 +77,28 @@ To start the application in development mode, run:
 ng serve
 ```
 
+Install prettier
+
+```bash
+bun add --dev --exact prettier
+```
+
+Format all files
+
+```bash
+bun prettier . --write
+```
+
+Check
+
+```bash
+npx prettier . --check
+```
+
 ## SVG Resources
 
 All the SVG files in this repository are sourced from [SVGRepo](https://www.svgrepo.com/vectors/github/outlined/). You are free to use and extract any of these assets as they are available at no cost. Enjoy!
+
+```
+
+```

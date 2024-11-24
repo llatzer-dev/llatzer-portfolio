@@ -8,9 +8,8 @@ describe('CareerAccordionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CareerAccordionComponent]
-    })
-    .compileComponents();
+      imports: [CareerAccordionComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(CareerAccordionComponent);
     component = fixture.componentInstance;

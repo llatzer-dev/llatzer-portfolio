@@ -42,7 +42,6 @@ export class BlogComponent {
   focused = false;
   position = { x: 0, y: 0 };
   opacity = 0;
-  // Mock data for testing
 
   onMouseMove(event: MouseEvent) {
     if (this.focused) return;

@@ -1,149 +1,196 @@
-<section class="min-h-screen max-w-2xl mx-auto text-primary-white px-4 mt-6">
+<section class="mx-auto mt-6 min-h-screen max-w-2xl px-4 text-primary-white">
   <p class="text-lg text-secondary-white">Home / About me</p>
 
-  <a class="text-primary-black dark:text-primary-white flex items-center font-bold text-xl text-left mb-6 py-2"
+  <a
+    class="mb-6 flex items-center py-2 text-left text-xl font-bold text-primary-black dark:text-primary-white"
     href="/">
     @if (darkMode$()) {
-    <img src="lucide/arrow-left-lucide.svg" alt="Arrow Left Icon" class="h-5 w-5 mr-2">
-    }
-    @else {
-    <img src="lucide/black/arrow-left-lucide.svg" alt="Arrow Left Icon" class="h-5 w-5 mr-2">
+      <img
+        src="lucide/arrow-left-lucide.svg"
+        alt="Arrow Left Icon"
+        class="mr-2 h-5 w-5" />
+    } @else {
+      <img
+        src="lucide/black/arrow-left-lucide.svg"
+        alt="Arrow Left Icon"
+        class="mr-2 h-5 w-5" />
     }
     Go Home
   </a>
 
-  <div class="flex items-center mb-6">
+  <div class="mb-6 flex items-center">
     @if (darkMode$()) {
-    <img src="lucide/bungee-shade/map-pin.svg" alt="Map Icon" class="h-8 w-8 mr-4">
+      <img
+        src="lucide/bungee-shade/map-pin.svg"
+        alt="Map Icon"
+        class="mr-4 h-8 w-8" />
+    } @else {
+      <img src="lucide/teja/map-pin.svg" alt="Map Icon" class="mr-4 h-8 w-8" />
     }
-    @else {
-    <img src="lucide/teja/map-pin.svg" alt="Map Icon" class="h-8 w-8 mr-4">
-    }
-    <h1 class="text-4xl font-bold text-teja dark:text-bungee-shade">With love, from Alicante</h1>
+    <h1 class="text-4xl font-bold text-teja dark:text-bungee-shade">
+      With love, from Alicante
+    </h1>
   </div>
 
-  <p class="text-lg text-pretty text-primary-black dark:text-secondary-white max-w-2xl mb-4">
-    Hi! I'm <strong>Lázaro Ortega</strong>, also known as <strong>Llatzer</strong>. I'm 22 years old.
+  <p
+    class="mb-4 max-w-2xl text-pretty text-lg text-primary-black dark:text-secondary-white">
+    Hi! I'm <strong>Lázaro Ortega</strong>, also known as
+    <strong>Llatzer</strong>. I'm 22 years old.
   </p>
-  <p class="text-lg text-pretty text-primary-black dark:text-secondary-white max-w-2xl mb-4">
+  <p
+    class="mb-4 max-w-2xl text-pretty text-lg text-primary-black dark:text-secondary-white">
     I'm a developer specialiced in Angular and Java.
   </p>
-  <p class="text-lg text-pretty text-primary-black dark:text-secondary-white max-w-2xl mb-4">
-    I'm passionate about understanding how things work and the reasoning behind every detail, both in technology and in
-    the world at large.
+  <p
+    class="mb-4 max-w-2xl text-pretty text-lg text-primary-black dark:text-secondary-white">
+    I'm passionate about understanding how things work and the reasoning behind
+    every detail, both in technology and in the world at large.
   </p>
 
-  <p class="text-lg text-pretty text-primary-black dark:text-secondary-white max-w-2xl mb-8">
-    I have always thought that defining oneself is difficult, but I am going to try:
+  <p
+    class="mb-8 max-w-2xl text-pretty text-lg text-primary-black dark:text-secondary-white">
+    I have always thought that defining oneself is difficult, but I am going to
+    try:
   </p>
 
   <div
-    class="max-w-2xl mb-8 bg-secondary-black dark:bg-transparent dark:border-2 dark:border-dashed dark:border-secondary-white p-6 rounded-xl">
+    class="mb-8 max-w-2xl rounded-xl bg-secondary-black p-6 dark:border-2 dark:border-dashed dark:border-secondary-white dark:bg-transparent">
     <div class="text-lg">
-      <p class="text-secondary-white flex items-center mb-6">
-        <img src="food.svg" alt="Food Icon" class="h-5 w-5 mr-4">
-        I'm a huge fan of breaded chicken, or as it's called in my culture, "milanesas."
+      <p class="mb-6 flex items-center text-secondary-white">
+        <img src="food.svg" alt="Food Icon" class="mr-4 h-5 w-5" />
+        I'm a huge fan of breaded chicken, or as it's called in my culture,
+        "milanesas."
       </p>
-      <p class="text-secondary-white flex items-center mb-6">
-        <img src="play.svg" alt="Play Icon" class="h-5 w-5 mr-4">
+      <p class="mb-6 flex items-center text-secondary-white">
+        <img src="play.svg" alt="Play Icon" class="mr-4 h-5 w-5" />
         In my free time, I enjoy playing Valorant.
       </p>
-      <p class="text-secondary-white flex items-center mb-6">
-        <img src="headphone.svg" alt="Headphone Icon" class="h-5 w-5 mr-4">
-        While I'm not an entrepreneur, I'm fascinated by how the worlds of business, companies, and entrepreneurship
-        operate.
+      <p class="mb-6 flex items-center text-secondary-white">
+        <img src="headphone.svg" alt="Headphone Icon" class="mr-4 h-5 w-5" />
+        While I'm not an entrepreneur, I'm fascinated by how the worlds of
+        business, companies, and entrepreneurship operate.
       </p>
-      <p class="text-secondary-white flex items-center mb-6">
-        <img src="flag.svg" alt="Flag Icon" class="h-5 w-5 mr-4">
-        I'm from Alicante, but I'm also interested in working abroad in the future, especially in Switzerland.
+      <p class="mb-6 flex items-center text-secondary-white">
+        <img src="flag.svg" alt="Flag Icon" class="mr-4 h-5 w-5" />
+        I'm from Alicante, but I'm also interested in working abroad in the
+        future, especially in Switzerland.
       </p>
-      <p class="text-secondary-white flex items-center mb-6">
-        <img src="otaku.svg" alt="Otaku Icon" class="h-5 w-5 mr-4">
-        I'm an anime enthusiast, although I haven't had much time lately to keep up with series.
+      <p class="mb-6 flex items-center text-secondary-white">
+        <img src="otaku.svg" alt="Otaku Icon" class="mr-4 h-5 w-5" />
+        I'm an anime enthusiast, although I haven't had much time lately to keep
+        up with series.
       </p>
-      <p class="text-secondary-white flex items-center mb-6">
-        <img src="freetime.svg" alt="Freetime Icon" class="h-5 w-5 mr-4">
-        Late at night, you might find me working on those wild 3 AM project ideas that pop into my head.
+      <p class="mb-6 flex items-center text-secondary-white">
+        <img src="freetime.svg" alt="Freetime Icon" class="mr-4 h-5 w-5" />
+        Late at night, you might find me working on those wild 3 AM project
+        ideas that pop into my head.
       </p>
     </div>
   </div>
 
-  <div class="max-w-2xl my-14">
-    <div class="flex items-center mb-6">
+  <div class="my-14 max-w-2xl">
+    <div class="mb-6 flex items-center">
       @if (darkMode$()) {
-      <img src="lucide/bungee-shade/graduation-cap.svg" alt="Map Icon" class="h-7 w-7 mr-4">
+        <img
+          src="lucide/bungee-shade/graduation-cap.svg"
+          alt="Map Icon"
+          class="mr-4 h-7 w-7" />
+      } @else {
+        <img
+          src="lucide/teja/graduation-cap.svg"
+          alt="Map Icon"
+          class="mr-4 h-7 w-7" />
       }
-      @else {
-      <img src="lucide/teja/graduation-cap.svg" alt="Map Icon" class="h-7 w-7 mr-4">
-      }
-      <h2 class="text-3xl font-semibold text-teja dark:text-bungee-shade">Academic Background</h2>
+      <h2 class="text-3xl font-semibold text-teja dark:text-bungee-shade">
+        Academic Background
+      </h2>
     </div>
-    <p class="text-lg text-primary-black dark:text-secondary-white mb-4">
+    <p class="mb-4 text-lg text-primary-black dark:text-secondary-white">
       <strong>Professional Internship</strong> - NTTDATA, Alicante (2022)
     </p>
-    <p class="text-lg text-primary-black dark:text-secondary-white mb-2">
-      <strong>Higher National Diploma in Multiplatform Application Development (DAM)</strong> - IES Marcos Zaragoza,
-      Villajoyosa, Alicante (2020 - 2022)
+    <p class="mb-2 text-lg text-primary-black dark:text-secondary-white">
+      <strong
+        >Higher National Diploma in Multiplatform Application Development
+        (DAM)</strong
+      >
+      - IES Marcos Zaragoza, Villajoyosa, Alicante (2020 - 2022)
     </p>
     <p class="text-base text-primary-black dark:text-secondary-white">
       <strong>Technologies & Tools</strong>
     </p>
-    <ul class="text-base list-disc pl-6 text-primary-black dark:text-secondary-white">
+    <ul
+      class="list-disc pl-6 text-base text-primary-black dark:text-secondary-white">
       <li>Languages: HTML, CSS, JavaScript, Java, Dart</li>
       <li>Frameworks: Angular, Flutter</li>
       <li>Preprocessors: TypeScript</li>
       <li>Databases: MySQL, MongoDB</li>
     </ul>
 
-    <a href="https://www.linkedin.com/in/lazaro-ortega/"
-      class="w-40 mt-10 flex items-center justify-center px-4 py-2 bg-teja dark:bg-bungee-shade text-primary-white dark:text-secondary-black font-bold rounded-lg transition-transform duration-200 hover:scale-105"
+    <a
+      href="https://www.linkedin.com/in/lazaro-ortega/"
+      class="mt-10 flex w-40 items-center justify-center rounded-lg bg-teja px-4 py-2 font-bold text-primary-white transition-transform duration-200 hover:scale-105 dark:bg-bungee-shade dark:text-secondary-black"
       aria-label="Contact Lazaro Ortega on LinkedIn">
-      @if(darkMode$()) {
-      <img src="lucide/black/linkedin-lucide.svg" alt="LinkedIn Icon" class="h-5 w-5 mr-2">
-      }
-      @else {
-      <img src="lucide/linkedin-lucide.svg" alt="LinkedIn Icon" class="h-5 w-5 mr-2">
+      @if (darkMode$()) {
+        <img
+          src="lucide/black/linkedin-lucide.svg"
+          alt="LinkedIn Icon"
+          class="mr-2 h-5 w-5" />
+      } @else {
+        <img
+          src="lucide/linkedin-lucide.svg"
+          alt="LinkedIn Icon"
+          class="mr-2 h-5 w-5" />
       }
       LinkedIn
     </a>
   </div>
 
-  <div class="flex flex-wrap gap-6 justify-center mb-40 mt-20">
+  <div class="mb-40 mt-20 flex flex-wrap justify-center gap-6">
     <h2
-      class="text-5xl md:text-9xl font-bold text-primary-black dark:text-secondary-white flex items-center justify-center mb-4 px-4 py-2">
+      class="mb-4 flex items-center justify-center px-4 py-2 text-5xl font-bold text-primary-black dark:text-secondary-white md:text-9xl">
       <span class="text-center">See more</span>
-      <span class="text-teja dark:text-bungee-shade ml-2">.</span>
+      <span class="ml-2 text-teja dark:text-bungee-shade">.</span>
     </h2>
 
-    <ul class="gap-4 grid grid-cols-1 md:grid-cols-2 w-full">
-      <li class="flex flex-col w-full">
-        <a href="/career" class="focus:ring-2 focus:ring-bungee-shade rounded-lg transition">
+    <ul class="grid w-full grid-cols-1 gap-4 md:grid-cols-2">
+      <li class="flex w-full flex-col">
+        <a
+          href="/career"
+          class="rounded-lg transition focus:ring-2 focus:ring-bungee-shade">
           <div
-            class="flex items-center gap-2 justify-center w-full py-3 font-semibold border border-secondary-white dark:border-none text-primary-black dark:text-white bg-primary-white dark:bg-secondary-black rounded-lg shadow-md transition-all duration-300 ease-in-out hover:bg-secondary-white dark:hover:bg-tertiary-black hover:shadow-lg">
+            class="flex w-full items-center justify-center gap-2 rounded-lg border border-secondary-white bg-primary-white py-3 font-semibold text-primary-black shadow-md transition-all duration-300 ease-in-out hover:bg-secondary-white hover:shadow-lg dark:border-none dark:bg-secondary-black dark:text-white dark:hover:bg-tertiary-black">
             @if (darkMode$()) {
-            <img src="lucide/bungee-shade/briefcase-lucide.svg" alt="Career Icon"
-              class="h-5 w-5 ml-1 transition-transform duration-200">
-            }
-            @else {
-            <img src="lucide/teja/briefcase-lucide.svg" alt="Career Icon"
-              class="h-5 w-5 ml-1 transition-transform duration-200">
+              <img
+                src="lucide/bungee-shade/briefcase-lucide.svg"
+                alt="Career Icon"
+                class="ml-1 h-5 w-5 transition-transform duration-200" />
+            } @else {
+              <img
+                src="lucide/teja/briefcase-lucide.svg"
+                alt="Career Icon"
+                class="ml-1 h-5 w-5 transition-transform duration-200" />
             }
             Career
           </div>
         </a>
       </li>
 
-      <li class="flex flex-col w-full">
-        <a href="/blog" class="focus:ring-2 focus:ring-bungee-shade rounded-lg transition">
+      <li class="flex w-full flex-col">
+        <a
+          href="/blog"
+          class="rounded-lg transition focus:ring-2 focus:ring-bungee-shade">
           <div
-            class="flex items-center gap-2 justify-center w-full py-3 font-semibold border border-secondary-white dark:border-none text-primary-black dark:text-white bg-primary-white dark:bg-secondary-black rounded-lg shadow-md transition-all duration-300 ease-in-out hover:bg-secondary-white dark:hover:bg-tertiary-black hover:shadow-lg">
+            class="flex w-full items-center justify-center gap-2 rounded-lg border border-secondary-white bg-primary-white py-3 font-semibold text-primary-black shadow-md transition-all duration-300 ease-in-out hover:bg-secondary-white hover:shadow-lg dark:border-none dark:bg-secondary-black dark:text-white dark:hover:bg-tertiary-black">
             @if (darkMode$()) {
-            <img src="lucide/bungee-shade/notepad-text-lucide.svg" alt="Blog Icon"
-              class="h-5 w-5 ml-1 transition-transform duration-200">
-            }
-            @else {
-            <img src="lucide/teja/notepad-text-lucide.svg" alt="Blog Icon"
-              class="h-5 w-5 ml-1 transition-transform duration-200">
+              <img
+                src="lucide/bungee-shade/notepad-text-lucide.svg"
+                alt="Blog Icon"
+                class="ml-1 h-5 w-5 transition-transform duration-200" />
+            } @else {
+              <img
+                src="lucide/teja/notepad-text-lucide.svg"
+                alt="Blog Icon"
+                class="ml-1 h-5 w-5 transition-transform duration-200" />
             }
             Blog
           </div>

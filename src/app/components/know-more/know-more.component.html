@@ -1,95 +1,137 @@
 <section id="knowmore" role="region" class="mt-4 rounded-xl text-center">
   <h2
-    class="text-3xl md:text-5xl font-bold mb-12 inline-flex items-center justify-center text-primary-black dark:text-secondary-white">
+    class="mb-12 inline-flex items-center justify-center text-3xl font-bold text-primary-black dark:text-secondary-white md:text-5xl">
     @if (darkMode$()) {
-    <img src="lucide/bungee-shade/library-lucide.svg" alt="Books Icon" class="w-8 h-8 md:w-12 md:h-12 mr-2">
-    }
-    @else {
-    <img src="lucide/teja/library-lucide.svg" alt="Books Icon" class="w-8 h-8 md:w-12 md:h-12 mr-2">
+      <img
+        src="lucide/bungee-shade/library-lucide.svg"
+        alt="Books Icon"
+        class="mr-2 h-8 w-8 md:h-12 md:w-12" />
+    } @else {
+      <img
+        src="lucide/teja/library-lucide.svg"
+        alt="Books Icon"
+        class="mr-2 h-8 w-8 md:h-12 md:w-12" />
     }
     Know More
-    <span class="text-teja dark:text-bungee-shade ml-2">.</span>
+    <span class="ml-2 text-teja dark:text-bungee-shade">.</span>
   </h2>
 
   <article
-    class="text-left mb-6 bg-primary-white dark:bg-transparent border border-secondary-white dark:border-tertiary-black rounded-xl p-4 md:p-6">
-    <h3 class="text-primary-black dark:text-secondary-white text-xl md:text-2xl font-bold flex items-center mb-4">
+    class="mb-6 rounded-xl border border-secondary-white bg-primary-white p-4 text-left dark:border-tertiary-black dark:bg-transparent md:p-6">
+    <h3
+      class="mb-4 flex items-center text-xl font-bold text-primary-black dark:text-secondary-white md:text-2xl">
       @if (darkMode$()) {
-      <img src="lucide/bungee-shade/briefcase-lucide.svg" alt="Career Icon" class="h-5 w-5 mr-2">
-      }
-      @else {
-      <img src="lucide/teja/briefcase-lucide.svg" alt="Career Icon" class="h-5 w-5 mr-2">
+        <img
+          src="lucide/bungee-shade/briefcase-lucide.svg"
+          alt="Career Icon"
+          class="mr-2 h-5 w-5" />
+      } @else {
+        <img
+          src="lucide/teja/briefcase-lucide.svg"
+          alt="Career Icon"
+          class="mr-2 h-5 w-5" />
       }
       Career
     </h3>
 
     <app-career-accordion [careers]="careers" />
 
-    <a routerLink="/career"
-      class="flex items-center justify-center w-full py-2 mt-4 focus:ring-2 focus:ring-bungee-shade font-semibold rounded-lg border border-secondary-white dark:border-transparent text-primary-black dark:text-primary-white bg-primary-white dark:bg-secondary-black hover:bg-secondary-white dark:hover:bg-tertiary-black transition-colors duration-300 ease-in-out group">
+    <a
+      routerLink="/career"
+      class="group mt-4 flex w-full items-center justify-center rounded-lg border border-secondary-white bg-primary-white py-2 font-semibold text-primary-black transition-colors duration-300 ease-in-out hover:bg-secondary-white focus:ring-2 focus:ring-bungee-shade dark:border-transparent dark:bg-secondary-black dark:text-primary-white dark:hover:bg-tertiary-black">
       See full work experience
       @if (darkMode$()) {
-      <img src="lucide/arrow-right-lucide.svg" alt="Arrow Right Icon"
-        class="h-5 w-5 ml-1 transition-transform duration-200 transform group-hover:translate-x-1 group-hover:ml-1.5">
-      }
-      @else {
-      <img src="lucide/black/arrow-right-lucide.svg" alt="Arrow Right Icon"
-        class="h-5 w-5 ml-1 transition-transform duration-200 transform group-hover:translate-x-1 group-hover:ml-1.5">
+        <img
+          src="lucide/arrow-right-lucide.svg"
+          alt="Arrow Right Icon"
+          class="ml-1 h-5 w-5 transform transition-transform duration-200 group-hover:ml-1.5 group-hover:translate-x-1" />
+      } @else {
+        <img
+          src="lucide/black/arrow-right-lucide.svg"
+          alt="Arrow Right Icon"
+          class="ml-1 h-5 w-5 transform transition-transform duration-200 group-hover:ml-1.5 group-hover:translate-x-1" />
       }
     </a>
   </article>
 
-  <div class="flex flex-col md:flex-row mb-4 gap-2 overflow-hidden h-auto">
+  <div class="mb-4 flex h-auto flex-col gap-2 overflow-hidden md:flex-row">
     <article
-      class="text-left bg-primary-white dark:bg-transparent border border-secondary-white dark:border-tertiary-black rounded-xl p-4 md:p-6 mb-4 md:w-1/2 w-full">
-      <h3 class="text-primary-black dark:text-secondary-white text-xl md:text-2xl font-bold flex items-center mb-4">
+      class="mb-4 w-full rounded-xl border border-secondary-white bg-primary-white p-4 text-left dark:border-tertiary-black dark:bg-transparent md:w-1/2 md:p-6">
+      <h3
+        class="mb-4 flex items-center text-xl font-bold text-primary-black dark:text-secondary-white md:text-2xl">
         @if (darkMode$()) {
-        <img src="lucide/bungee-shade/dumbbell-lucide.svg" alt="Skills Icon" class="h-5 w-5 mr-2">
-        }
-        @else {
-        <img src="lucide/teja/dumbbell-lucide.svg" alt="Skills Icon" class="h-5 w-5 mr-2">
+          <img
+            src="lucide/bungee-shade/dumbbell-lucide.svg"
+            alt="Skills Icon"
+            class="mr-2 h-5 w-5" />
+        } @else {
+          <img
+            src="lucide/teja/dumbbell-lucide.svg"
+            alt="Skills Icon"
+            class="mr-2 h-5 w-5" />
         }
         Skills
       </h3>
 
       @for (skillCategory of skillsCategories; track $index) {
-      <div class="scroller" [attr.data-direction]="skillCategory.direction" [attr.data-speed]="skillCategory.speed">
-        <ul class="{{ darkMode$() ? 'tag-list' : 'tag-list-light' }} tag-list scroller__inner">
-          @for (skill of skillCategory.skills; track $index) {
-          <li
-            class="px-3 py-1 border text-primary-black dark:text-primary-white border-tertiary-black rounded-2xl transition duration-300">
-            {{skill.skillName}}
-          </li>
-          }
-        </ul>
-      </div>
+        <div
+          class="scroller"
+          [attr.data-direction]="skillCategory.direction"
+          [attr.data-speed]="skillCategory.speed">
+          <ul
+            class="{{
+              darkMode$() ? 'tag-list' : 'tag-list-light'
+            }} tag-list scroller__inner">
+            @for (skill of skillCategory.skills; track $index) {
+              <li
+                class="rounded-2xl border border-tertiary-black px-3 py-1 text-primary-black transition duration-300 dark:text-primary-white">
+                {{ skill.skillName }}
+              </li>
+            }
+          </ul>
+        </div>
       }
     </article>
 
     <article
-      class="p-4 md:p-6 bg-primary-white dark:bg-transparent border border-secondary-white dark:border-tertiary-black rounded-lg mb-4 md:w-1/2 w-full h-68">
-      <h3 class="text-primary-black dark:text-secondary-white text-xl md:text-2xl font-bold flex items-center mb-6">
+      class="mb-4 h-68 w-full rounded-lg border border-secondary-white bg-primary-white p-4 dark:border-tertiary-black dark:bg-transparent md:w-1/2 md:p-6">
+      <h3
+        class="mb-6 flex items-center text-xl font-bold text-primary-black dark:text-secondary-white md:text-2xl">
         @if (darkMode$()) {
-        <img src="lucide/bungee-shade/layers-lucide.svg" alt="Stack Icon" class="h-5 w-5 mr-2">
-        }
-        @else {
-        <img src="lucide/teja/layers-lucide.svg" alt="Stack Icon" class="h-5 w-5 mr-2">
+          <img
+            src="lucide/bungee-shade/layers-lucide.svg"
+            alt="Stack Icon"
+            class="mr-2 h-5 w-5" />
+        } @else {
+          <img
+            src="lucide/teja/layers-lucide.svg"
+            alt="Stack Icon"
+            class="mr-2 h-5 w-5" />
         }
         Stack
       </h3>
 
-      <div class="dark-scroll overflow-y-auto h-[calc(100%-3rem)]">
+      <div class="dark-scroll h-[calc(100%-3rem)] overflow-y-auto">
         @for (stack of stacks; track $index) {
-        @if (stack.show) {
-        <section class="flex items-center md:border md:border-tertiary-black rounded-xl p-2 mb-2">
-          <img [src]="stack.image" [alt]="stack.name + ' Icon'" class="h-full w-12 mr-4 max-h-12">
-          <div class="text-left">
-            <h3 class="text-lg font-semibold flex items-center text-primary-black dark:text-primary-white">
-              {{stack.name}}</h3>
-            <p class="text-sm font-semibold text-secondary-white dark:text-secondary-white">{{stack.stackCategory}}</p>
-          </div>
-        </section>
-        }
+          @if (stack.show) {
+            <section
+              class="mb-2 flex items-center rounded-xl p-2 md:border md:border-tertiary-black">
+              <img
+                [src]="stack.image"
+                [alt]="stack.name + ' Icon'"
+                class="mr-4 h-full max-h-12 w-12" />
+              <div class="text-left">
+                <h3
+                  class="flex items-center text-lg font-semibold text-primary-black dark:text-primary-white">
+                  {{ stack.name }}
+                </h3>
+                <p
+                  class="text-sm font-semibold text-secondary-white dark:text-secondary-white">
+                  {{ stack.stackCategory }}
+                </p>
+              </div>
+            </section>
+          }
         }
       </div>
     </article>

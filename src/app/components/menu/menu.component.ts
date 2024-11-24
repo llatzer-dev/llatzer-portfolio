@@ -34,7 +34,7 @@ export class MenuComponent implements AfterViewInit {
   showMenu() {
     const menu = document.querySelectorAll('.floating-bar-wrapper');
     const scrollTop = document.documentElement.scrollTop;
-    menu.forEach((item) => {
+    menu.forEach(item => {
       const { classList: className } = item as HTMLElement;
       if (scrollTop >= 200) {
         className.remove('novisible');

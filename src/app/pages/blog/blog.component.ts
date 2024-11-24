@@ -5,6 +5,7 @@ import {
   HostBinding,
   inject,
   Renderer2,
+  OnInit,
 } from '@angular/core';
 import { Blog } from '@app/models/interfaces';
 import { DarkmodeService } from '@app/services/darkmode.service';
@@ -17,7 +18,7 @@ import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css',
 })
-export class BlogComponent {
+export class BlogComponent implements OnInit {
   private blogService = inject(BlogService);
   public darkMode = inject(DarkmodeService);
   private renderer = inject(Renderer2);

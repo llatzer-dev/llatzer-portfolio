@@ -1,54 +1,68 @@
 @for (career of careers(); track career.id; let i = $index) {
-<div class="group">
-  <!-- Botón del encabezado del acordeón -->
-  <button
-    class="flex items-center justify-between px-4 py-2 mb-2 rounded-xl hover:bg-secondary-white hover:bg-opacity-30 dark:hover:bg-opacity-15 duration-300 group w-full gap-4"
-    (click)="toggleAccordion(i)" [attr.aria-expanded]="activeIndex === i ? 'true' : 'false'"
-    [attr.aria-controls]="'accordion-content-' + i">
-    <div class="flex flex-col text-left">
-      <div
-        class="text-sm md:text-lg text-primary-black dark:text-primary-white font-bold transition-transform duration-200 transform group-hover:translate-x-1">
-        {{career.position}}
+  <div class="group">
+    <!-- Botón del encabezado del acordeón -->
+    <button
+      class="group mb-2 flex w-full items-center justify-between gap-4 rounded-xl px-4 py-2 duration-300 hover:bg-secondary-white hover:bg-opacity-30 dark:hover:bg-opacity-15"
+      (click)="toggleAccordion(i)"
+      [attr.aria-expanded]="activeIndex === i ? 'true' : 'false'"
+      [attr.aria-controls]="'accordion-content-' + i">
+      <div class="flex flex-col text-left">
+        <div
+          class="transform text-sm font-bold text-primary-black transition-transform duration-200 group-hover:translate-x-1 dark:text-primary-white md:text-lg">
+          {{ career.position }}
+        </div>
+        <div
+          class="transform text-sm font-bold text-secondary-white transition-transform duration-200 group-hover:translate-x-1 dark:text-secondary-white md:text-lg">
+          {{ career.company }}
+        </div>
       </div>
       <div
-        class="text-sm md:text-lg text-secondary-white dark:text-secondary-white font-bold transition-transform duration-200 transform group-hover:translate-x-1">
-        {{career.company}}
+        class="hidden flex-grow border-b border-secondary-white md:block"></div>
+      <div class="flex flex-col text-right">
+        <div
+          class="text-sm font-semibold text-primary-black dark:text-primary-white md:text-lg">
+          {{ career.location }}
+        </div>
+        <div
+          class="text-sm font-semibold text-secondary-white dark:text-secondary-white md:text-lg">
+          {{ career.time }}
+        </div>
       </div>
-    </div>
-    <div class="flex-grow border-b border-secondary-white hidden md:block"></div>
-    <div class="flex flex-col text-right">
-      <div class="text-sm md:text-lg text-primary-black dark:text-primary-white font-semibold">
-        {{ career.location }}
+      <div>
+        @if (darkMode$()) {
+          <img
+            [class.rotate-180]="activeIndex === i"
+            src="lucide/arrow-down-lucide.svg"
+            alt="See Detail Career Icon"
+            class="mr-2 size-5 transition-transform duration-300" />
+        } @else {
+          <img
+            [class.rotate-180]="activeIndex === i"
+            src="lucide/black/arrow-down-lucide.svg"
+            alt="See Detail Career Icon"
+            class="mr-2 size-5 transition-transform duration-300" />
+        }
       </div>
-      <div class="text-sm md:text-lg text-secondary-white dark:text-secondary-white font-semibold">
-        {{ career.time }}
-      </div>
-    </div>
-    <div>
-      @if (darkMode$()) {
-      <img [class.rotate-180]="activeIndex === i" src="lucide/arrow-down-lucide.svg" alt="See Detail Career Icon"
-        class="size-5 mr-2 transition-transform duration-300">
-      }
-      @else {
-      <img [class.rotate-180]="activeIndex === i" src="lucide/black/arrow-down-lucide.svg" alt="See Detail Career Icon"
-        class="size-5 mr-2 transition-transform duration-300">
-      }
-    </div>
-  </button>
+    </button>
 
-  <!-- Accordion Content -->
-  <div id="accordion-content-{{ i }}" [class.max-h-0]="activeIndex !== i" [class.max-h-[1000px]]="activeIndex === i"
-    class="overflow-hidden transition-max-height duration-300 ease-in-out">
-    @for (detail of career.details; track $index) {
-    <article class="flex gap-4 items-center px-8 py-2">
-      <img src="lucide/bungee-shade/diamond-lucide.svg" alt="Detail Career Icon" class="size-3">
-      <div class="bg-light-200 dark:bg-dark-800 rounded-lg text-secondary-white">
-        {{detail}}
-      </div>
-    </article>
-
-    }
+    <!-- Accordion Content -->
+    <div
+      id="accordion-content-{{ i }}"
+      [class.max-h-0]="activeIndex !== i"
+      [class.max-h-[1000px]]="activeIndex === i"
+      class="transition-max-height overflow-hidden duration-300 ease-in-out">
+      @for (detail of career.details; track $index) {
+        <article class="flex items-center gap-4 px-8 py-2">
+          <img
+            src="lucide/bungee-shade/diamond-lucide.svg"
+            alt="Detail Career Icon"
+            class="size-3" />
+          <div
+            class="bg-light-200 dark:bg-dark-800 rounded-lg text-secondary-white">
+            {{ detail }}
+          </div>
+        </article>
+      }
+    </div>
   </div>
-</div>
-
 }

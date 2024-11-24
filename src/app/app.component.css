@@ -1,7 +1,7 @@
 .h1-under-construction {
-  @apply text-3xl font-bold underline mx-auto md:text-5xl lg:text-6xl;
+  @apply mx-auto text-3xl font-bold underline md:text-5xl lg:text-6xl;
 }
 
 .container-under-construction {
-  @apply flex flex-col items-center gap-6 md:gap-12 justify-center h-screen p-4;
+  @apply flex h-screen flex-col items-center justify-center gap-6 p-4 md:gap-12;
 }

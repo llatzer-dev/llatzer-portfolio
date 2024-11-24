@@ -41,10 +41,12 @@
 }
 
 .floating-bar-wrapper {
-  @apply z-10 fixed bottom-[3%] left-0 right-0;
+  @apply fixed bottom-[3%] left-0 right-0 z-10;
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  transition:
+    opacity 0.5s ease-out,
+    transform 0.5s ease-out;
 }
 
 .floating-bar-wrapper.visible {
@@ -57,11 +59,11 @@
 }
 
 .center-dynamic-bar {
-  @apply flex justify-center w-full;
+  @apply flex w-full justify-center;
 }
 
 .dynamic-bar {
-  @apply border border-secondary-white dark:border-tertiary-black bg-primary-white dark:bg-secondary-black rounded-lg flex justify-center items-center p-2;
+  @apply flex items-center justify-center rounded-lg border border-secondary-white bg-primary-white p-2 dark:border-tertiary-black dark:bg-secondary-black;
 }
 
 .dynamic-bar-avatar {
@@ -71,13 +73,13 @@
 }
 
 .dynamic-item {
-  @apply text-primary-white bg-tertiary-black rounded-md ml-2 p-1.5 flex overflow-hidden;
+  @apply ml-2 flex overflow-hidden rounded-md bg-tertiary-black p-1.5 text-primary-white;
 }
 
 ._24px {
-  @apply w-6 min-w-6 h-6 min-h-6;
+  @apply h-6 min-h-6 w-6 min-w-6;
 }
 
 .icon-solid {
-  @apply flex justify-center items-center;
+  @apply flex items-center justify-center;
 }

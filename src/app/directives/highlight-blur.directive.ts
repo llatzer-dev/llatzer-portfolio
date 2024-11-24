@@ -1,11 +1,14 @@
-import { Directive, ElementRef, inject, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, Renderer2, OnInit } from '@angular/core';
 
 @Directive({
   selector: '[appHighlightBlur]',
   standalone: true,
 })
-export class HighlightBlurDirective {
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+export class HighlightBlurDirective implements OnInit {
+  constructor(
+    private el: ElementRef,
+    private renderer: Renderer2
+  ) {}
 
   ngOnInit(): void {
     const blurDiv = this.renderer.createElement('div');

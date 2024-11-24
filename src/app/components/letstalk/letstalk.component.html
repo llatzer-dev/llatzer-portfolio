@@ -1,30 +1,39 @@
-<section id="letstalk" class="mt-4 p-6 md:p-12 rounded-xl mb-40">
-  <h2 class="text-center text-8xl md:text-9xl font-bold text-primary-black dark:text-secondary-white mb-4 px-4 py-2">
-    <span class="text-center">Let<span class="text-teja dark:text-bungee-shade ml-2">'</span>s Talk</span>
-    <span class="text-teja dark:text-bungee-shade ml-2">.</span>
+<section id="letstalk" class="mb-40 mt-4 rounded-xl p-6 md:p-12">
+  <h2
+    class="mb-4 px-4 py-2 text-center text-8xl font-bold text-primary-black dark:text-secondary-white md:text-9xl">
+    <span class="text-center"
+      >Let<span class="ml-2 text-teja dark:text-bungee-shade">'</span>s
+      Talk</span
+    >
+    <span class="ml-2 text-teja dark:text-bungee-shade">.</span>
   </h2>
 
-  <div class="flex flex-wrap gap-6 justify-center">
-    <ul class="gap-4 grid grid-cols-1 md:grid-cols-2 w-full">
+  <div class="flex flex-wrap justify-center gap-6">
+    <ul class="grid w-full grid-cols-1 gap-4 md:grid-cols-2">
       @for (social of socials; track $index) {
-      <li class="flex flex-col w-full">
-        <a [href]="social.socialLink" target="_blank"
-          class="focus:ring-4 focus:ring-bungee-shade rounded-lg transition">
-          <div
-            class="flex items-center gap-2 justify-center w-full py-3 font-semibold text-primary-black dark:text-primary-white border border-secondary-white dark:border-none bg-primary-white dark:bg-secondary-black rounded-lg transition-all duration-300 ease-in-out hover:bg-secondary-white dark:hover:bg-tertiary-black">
-            @if (darkMode$()) {
-            <img [src]="social.socialIcon" [alt]="social.socialName + 'Icon'"
-              class="h-5 w-5 ml-1 transition-transform duration-200">
-            {{social.socialName}}
-            }
-            @else {
-            <img [src]="social.socialIconLight" [alt]="social.socialName + 'Icon'"
-              class="h-5 w-5 ml-1 transition-transform duration-200">
-            {{social.socialName}}
-            }
-          </div>
-        </a>
-      </li>
+        <li class="flex w-full flex-col">
+          <a
+            [href]="social.socialLink"
+            target="_blank"
+            class="rounded-lg transition focus:ring-4 focus:ring-bungee-shade">
+            <div
+              class="flex w-full items-center justify-center gap-2 rounded-lg border border-secondary-white bg-primary-white py-3 font-semibold text-primary-black transition-all duration-300 ease-in-out hover:bg-secondary-white dark:border-none dark:bg-secondary-black dark:text-primary-white dark:hover:bg-tertiary-black">
+              @if (darkMode$()) {
+                <img
+                  [src]="social.socialIcon"
+                  [alt]="social.socialName + 'Icon'"
+                  class="ml-1 h-5 w-5 transition-transform duration-200" />
+                {{ social.socialName }}
+              } @else {
+                <img
+                  [src]="social.socialIconLight"
+                  [alt]="social.socialName + 'Icon'"
+                  class="ml-1 h-5 w-5 transition-transform duration-200" />
+                {{ social.socialName }}
+              }
+            </div>
+          </a>
+        </li>
       }
     </ul>
   </div>

@@ -4,6 +4,7 @@ import {
   HostBinding,
   inject,
   Renderer2,
+  OnInit,
 } from '@angular/core';
 import { CalculateDurationDirective } from '@app/directives/calculateduration.directive';
 import { DarkmodeService } from '@app/services/darkmode.service';
@@ -16,7 +17,7 @@ import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
   templateUrl: './career.component.html',
   styleUrl: './career.component.css',
 })
-export class CareerComponent {
+export class CareerComponent implements OnInit {
   public darkMode = inject(DarkmodeService);
   private renderer = inject(Renderer2);
   private isBrowser = inject(CheckPlatformUtility);

@@ -1,67 +1,95 @@
-@if(testimonials.length > 0){
-<section id="testimonials" class="mt-4 rounded-xl text-center">
-  <h2
-    class="text-3xl md:text-5xl font-bold inline-flex items-center justify-center mb-12 text-primary-black dark:text-secondary-white">
-    @if (darkMode$()) {
-    <img src="lucide/bungee-shade/sparkle-lucide.svg" alt="Recommendation Letters Icon"
-      class="w-8 h-8 md:w-10 md:h-10 mr-2">
-    }
-    @else {
-    <img src="lucide/teja/sparkle-lucide.svg" alt="Recommendation Letters Icon" class="w-8 h-8 md:w-10 md:h-10 mr-2">
-    }
-    Recommendation
-    <span class="hidden md:block">&nbsp;Letters</span>
-    <span class="text-teja dark:text-bungee-shade ml-2">.</span>
-  </h2>
+@if (testimonials.length > 0) {
+  <section id="testimonials" class="mt-4 rounded-xl text-center">
+    <h2
+      class="mb-12 inline-flex items-center justify-center text-3xl font-bold text-primary-black dark:text-secondary-white md:text-5xl">
+      @if (darkMode$()) {
+        <img
+          src="lucide/bungee-shade/sparkle-lucide.svg"
+          alt="Recommendation Letters Icon"
+          class="mr-2 h-8 w-8 md:h-10 md:w-10" />
+      } @else {
+        <img
+          src="lucide/teja/sparkle-lucide.svg"
+          alt="Recommendation Letters Icon"
+          class="mr-2 h-8 w-8 md:h-10 md:w-10" />
+      }
+      Recommendation
+      <span class="hidden md:block">&nbsp;Letters</span>
+      <span class="ml-2 text-teja dark:text-bungee-shade">.</span>
+    </h2>
 
-  <div class="flex flex-col md:flex-row justify-center gap-6 md:gap-12">
-    @for (testimonial of testimonialsMockUp; track $index) {
-    @let companyIcon = testimonial.companyIcon;
-    @let companyBg = testimonial.companyBackground;
-    @let companyName = testimonial.companyName;
-    @let position = testimonial.testimonialPosition;
-    @let name = testimonial.testimonialName;
-    @let text = testimonial.testimonialText;
-    @let downloadFile = testimonial.testimonialFile;
-    @let isHighlight = testimonial.isHighlight;
+    <div class="flex flex-col justify-center gap-6 md:flex-row md:gap-12">
+      @for (testimonial of testimonialsMockUp; track $index) {
+        @let companyIcon = testimonial.companyIcon;
+        @let companyBg = testimonial.companyBackground;
+        @let companyName = testimonial.companyName;
+        @let position = testimonial.testimonialPosition;
+        @let name = testimonial.testimonialName;
+        @let text = testimonial.testimonialText;
+        @let downloadFile = testimonial.testimonialFile;
+        @let isHighlight = testimonial.isHighlight;
 
-    <article appBorderHighlight [isHighlight]="isHighlight"
-      class="w-full md:w-1/2 border bg-primary-white dark:bg-transparent border-secondary-white dark:border-tertiary-black rounded-xl p-8">
+        <article
+          appBorderHighlight
+          [isHighlight]="isHighlight"
+          class="w-full rounded-xl border border-secondary-white bg-primary-white p-8 dark:border-tertiary-black dark:bg-transparent md:w-1/2">
+          <header class="ml-10">
+            <div class="mb-4 flex items-center gap-2">
+              <img
+                [src]="companyIcon"
+                [alt]="companyName + ' Logo'"
+                class="size-8 rounded-full object-contain"
+                [style.backgroundColor]="companyBg" />
+              <p
+                class="text-base font-bold text-primary-black dark:text-primary-white">
+                {{ companyName }}
+              </p>
+            </div>
 
-      <header class="ml-10">
-        <div class="flex items-center gap-2 mb-4">
-          <img [src]="companyIcon" [alt]="companyName + ' Logo'" class="size-8 rounded-full object-contain"
-            [style.backgroundColor]="companyBg">
-          <p class="text-base font-bold text-primary-black dark:text-primary-white">{{companyName}}</p>
-        </div>
+            <div class="text-left">
+              <p
+                class="text-lg font-bold text-primary-black dark:text-primary-white">
+                {{ name }}
+              </p>
+              <p class="text-primary-black dark:text-primary-white">
+                {{ position }}
+              </p>
+            </div>
+          </header>
 
-        <div class="text-left">
-          <p class="text-lg font-bold text-primary-black dark:text-primary-white">{{name}}</p>
-          <p class="text-primary-black dark:text-primary-white">{{position}}
-          </p>
-        </div>
-      </header>
+          <section
+            class="my-6 flex gap-4 text-left text-sm text-secondary-white dark:text-secondary-white">
+            <img
+              src="lucide/bungee-shade/quote-lucide.svg"
+              alt="Quote Icon"
+              class="h-6 w-6 rotate-180" />
+            {{ text }}
+            <img
+              src="lucide/bungee-shade/quote-lucide.svg"
+              alt="Quote Icon"
+              class="h-6 w-6 translate-x-[-18px] transform" />
+          </section>
 
-      <section class="flex gap-4 text-secondary-white dark:text-secondary-white my-6 text-left text-sm">
-        <img src="lucide/bungee-shade/quote-lucide.svg" alt="Quote Icon" class="w-6 h-6 rotate-180">
-        {{text}}
-        <img src="lucide/bungee-shade/quote-lucide.svg" alt="Quote Icon" class="w-6 h-6 transform translate-x-[-18px]">
-      </section>
-
-      <a [href]="downloadFile"
-        class="inline-flex items-center px-4 py-2 border border-secondary-white dark:border-transparent text-primary-black dark:text-primary-white bg-transparent dark:bg-secondary-black hover:bg-secondary-white dark:hover:bg-tertiary-black rounded-xl transition-all duration-300 ease-in-out"
-        download aria-label="Download Recommendation Letter">
-        @if (darkMode$()) {
-        <img src="lucide/download-lucide.svg" alt="Download Icon" class="h-5 w-5 mr-1">
-        }
-        @else {
-        <img src="lucide/black/download-lucide.svg" alt="Download Icon" class="h-5 w-5 mr-1">
-        }
-        Download
-      </a>
-    </article>
-    }
-  </div>
-
-</section>
+          <a
+            [href]="downloadFile"
+            class="inline-flex items-center rounded-xl border border-secondary-white bg-transparent px-4 py-2 text-primary-black transition-all duration-300 ease-in-out hover:bg-secondary-white dark:border-transparent dark:bg-secondary-black dark:text-primary-white dark:hover:bg-tertiary-black"
+            download
+            aria-label="Download Recommendation Letter">
+            @if (darkMode$()) {
+              <img
+                src="lucide/download-lucide.svg"
+                alt="Download Icon"
+                class="mr-1 h-5 w-5" />
+            } @else {
+              <img
+                src="lucide/black/download-lucide.svg"
+                alt="Download Icon"
+                class="mr-1 h-5 w-5" />
+            }
+            Download
+          </a>
+        </article>
+      }
+    </div>
+  </section>
 }

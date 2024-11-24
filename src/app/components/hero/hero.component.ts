@@ -19,5 +19,5 @@ export class HeroComponent {
     return this.darkMode.getDarkMode();
   }
 
-  oldHero = input.required<Boolean>();
+  oldHero = input.required<boolean>();
 }
