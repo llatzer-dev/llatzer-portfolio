@@ -10,7 +10,7 @@ import {
 import { RouterLink } from '@angular/router';
 import { DIRECTION, SPEED } from '@app/models/enums';
 import { Career, SkillCategory, Stack } from '@app/models/interfaces';
-import { DarkmodeService } from '@app/services/darkmode.service';
+import { DarkModeService } from '@app/services/darkmode.service';
 import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
 import { CareerAccordionComponent } from '../career-accordion/career-accordion.component';
 
@@ -25,7 +25,7 @@ import { CareerAccordionComponent } from '../career-accordion/career-accordion.c
 export class KnowMoreComponent implements AfterViewInit {
   private checkPlatform = inject(CheckPlatformUtility);
   private el = inject(ElementRef);
-  public darkMode = inject(DarkmodeService);
+  public darkMode = inject(DarkModeService);
 
   public skillsCategories: SkillCategory[] = [
     {

@@ -4,7 +4,7 @@ import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
 @Injectable({
   providedIn: 'root',
 })
-export class DarkmodeService {
+export class DarkModeService {
   private checkPlatform = inject(CheckPlatformUtility);
 
   private readonly DARKMODE: string = 'darkMode';

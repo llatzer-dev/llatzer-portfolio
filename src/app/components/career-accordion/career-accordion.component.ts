@@ -8,7 +8,7 @@ import {
   InputSignal,
 } from '@angular/core';
 import { Career } from '@app/models/interfaces';
-import { DarkmodeService } from '@app/services/darkmode.service';
+import { DarkModeService } from '@app/services/darkmode.service';
 
 @Component({
   selector: 'app-career-accordion',
@@ -19,7 +19,7 @@ import { DarkmodeService } from '@app/services/darkmode.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CareerAccordionComponent {
-  public darkMode = inject(DarkmodeService);
+  public darkMode = inject(DarkModeService);
 
   readonly careers: InputSignal<Career[]> = input<Career[]>([]);
   protected readonly darkMode$ = computed(() => this.darkMode.getDarkMode());

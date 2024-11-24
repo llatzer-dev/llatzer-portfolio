@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import { BorderHighlightDirective } from '@app/directives/highlight-border.directive';
 import { Testimonial } from '@app/models/interfaces';
-import { DarkmodeService } from '@app/services/darkmode.service';
+import { DarkModeService } from '@app/services/darkmode.service';
 
 @Component({
   selector: 'app-testimonials',
@@ -18,7 +18,7 @@ import { DarkmodeService } from '@app/services/darkmode.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TestimonialsComponent {
-  public darkMode = inject(DarkmodeService);
+  public darkMode = inject(DarkModeService);
 
   public testimonials: Testimonial[] = [
     {

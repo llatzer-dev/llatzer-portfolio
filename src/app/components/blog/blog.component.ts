@@ -8,7 +8,7 @@ import {
   input,
 } from '@angular/core';
 import { Blog } from '@app/models/interfaces';
-import { DarkmodeService } from '@app/services/darkmode.service';
+import { DarkModeService } from '@app/services/darkmode.service';
 import { WrapperPostComponent } from '../wrapper-post/wrapper-post.component';
 
 @Component({
@@ -20,7 +20,7 @@ import { WrapperPostComponent } from '../wrapper-post/wrapper-post.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BlogComponent {
-  public darkMode = inject(DarkmodeService);
+  public darkMode = inject(DarkModeService);
 
   public blogs = input.required<Blog[]>();
 

@@ -14,7 +14,7 @@ import { LetstalkComponent } from '../../components/letstalk/letstalk.component'
 import { MenuComponent } from '../../components/menu/menu.component';
 import { Blog } from '@app/models/interfaces';
 import { BlogService } from '@app/services/blog.service';
-import { DarkmodeService } from '@app/services/darkmode.service';
+import { DarkModeService } from '@app/services/darkmode.service';
 import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
 
 @Component({
@@ -35,16 +35,14 @@ import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
 })
 export class HomeComponent implements OnInit {
   private blogService = inject(BlogService);
-  private darkMode = inject(DarkmodeService);
+  private darkMode = inject(DarkModeService);
   private renderer = inject(Renderer2);
   private isBrowser = inject(CheckPlatformUtility);
 
   public oldHero: boolean = false;
-  public blogs: Blog[] = [];
+  public blogs: Blog[] = this.blogService.getBlogs();
 
   ngOnInit(): void {
-    this.blogs = this.blogService.getBlogs();
-
     if (this.darkMode.getDarkMode() && this.isBrowser.checkIfBrowser()) {
       this.renderer.setStyle(document.body, 'backgroundColor', '#0E0E0E');
     } else {

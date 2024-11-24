@@ -9,7 +9,7 @@ import {
   ChangeDetectionStrategy,
 } from '@angular/core';
 import { Blog } from '@app/models/interfaces';
-import { DarkmodeService } from '@app/services/darkmode.service';
+import { DarkModeService } from '@app/services/darkmode.service';
 import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
 
 @Component({
@@ -22,7 +22,7 @@ import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
 })
 export class BlogComponent implements OnInit {
   private blogService = inject(BlogService);
-  public darkMode = inject(DarkmodeService);
+  public darkMode = inject(DarkModeService);
   private renderer = inject(Renderer2);
   private isBrowser = inject(CheckPlatformUtility);
 

@@ -6,7 +6,7 @@ import {
   inject,
 } from '@angular/core';
 import { Social } from '@app/models/interfaces';
-import { DarkmodeService } from '@app/services/darkmode.service';
+import { DarkModeService } from '@app/services/darkmode.service';
 
 @Component({
   selector: 'app-letstalk',
@@ -17,7 +17,7 @@ import { DarkmodeService } from '@app/services/darkmode.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LetstalkComponent {
-  public darkMode = inject(DarkmodeService);
+  public darkMode = inject(DarkModeService);
 
   protected readonly darkMode$ = computed(() => this.darkMode.getDarkMode());
 

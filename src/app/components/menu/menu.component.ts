@@ -6,7 +6,7 @@ import {
   HostBinding,
   inject,
 } from '@angular/core';
-import { DarkmodeService } from '@app/services/darkmode.service';
+import { DarkModeService } from '@app/services/darkmode.service';
 import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
 
 @Component({
@@ -19,7 +19,7 @@ import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
 })
 export class MenuComponent implements AfterViewInit {
   private checkPlatform = inject(CheckPlatformUtility);
-  public darkMode = inject(DarkmodeService);
+  public darkMode = inject(DarkModeService);
 
   protected readonly darkMode$ = computed(() => this.darkMode.getDarkMode());
 

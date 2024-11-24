@@ -7,7 +7,7 @@ import {
   OnInit,
   ChangeDetectionStrategy,
 } from '@angular/core';
-import { DarkmodeService } from '@app/services/darkmode.service';
+import { DarkModeService } from '@app/services/darkmode.service';
 import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
 
 @Component({
@@ -19,7 +19,7 @@ import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AboutMeComponent implements OnInit {
-  public darkMode = inject(DarkmodeService);
+  public darkMode = inject(DarkModeService);
   private renderer = inject(Renderer2);
   private isBrowser = inject(CheckPlatformUtility);
 

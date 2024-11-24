@@ -8,7 +8,7 @@ import {
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { HighlightBlurDirective } from '@app/directives/highlight-blur.directive';
-import { DarkmodeService } from '@app/services/darkmode.service';
+import { DarkModeService } from '@app/services/darkmode.service';
 
 @Component({
   selector: 'app-hero',
@@ -19,7 +19,7 @@ import { DarkmodeService } from '@app/services/darkmode.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeroComponent {
-  public darkMode = inject(DarkmodeService);
+  public darkMode = inject(DarkModeService);
 
   protected readonly darkMode$ = computed(() => this.darkMode.getDarkMode());
 

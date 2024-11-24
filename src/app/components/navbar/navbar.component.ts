@@ -6,7 +6,7 @@ import {
   inject,
   Renderer2,
 } from '@angular/core';
-import { DarkmodeService } from '@app/services/darkmode.service';
+import { DarkModeService } from '@app/services/darkmode.service';
 
 @Component({
   selector: 'app-navbar',
@@ -17,7 +17,7 @@ import { DarkmodeService } from '@app/services/darkmode.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent {
-  public darkMode = inject(DarkmodeService);
+  public darkMode = inject(DarkModeService);
   private renderer = inject(Renderer2);
 
   protected readonly darkMode$ = computed(() => this.darkMode.getDarkMode());
