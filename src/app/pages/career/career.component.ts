@@ -5,6 +5,7 @@ import {
   inject,
   Renderer2,
   OnInit,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { CalculateDurationDirective } from '@app/directives/calculateduration.directive';
 import { DarkmodeService } from '@app/services/darkmode.service';
@@ -16,6 +17,7 @@ import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
   imports: [CalculateDurationDirective],
   templateUrl: './career.component.html',
   styleUrl: './career.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CareerComponent implements OnInit {
   public darkMode = inject(DarkmodeService);

@@ -5,6 +5,7 @@ import {
   inject,
   Renderer2,
   OnInit,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { DarkmodeService } from '@app/services/darkmode.service';
 import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
@@ -15,6 +16,7 @@ import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
   imports: [],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AboutMeComponent implements OnInit {
   public darkMode = inject(DarkmodeService);

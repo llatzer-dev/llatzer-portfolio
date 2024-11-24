@@ -1,5 +1,6 @@
 import {
   AfterViewInit,
+  ChangeDetectionStrategy,
   Component,
   computed,
   ElementRef,
@@ -19,6 +20,7 @@ import { CareerAccordionComponent } from '../career-accordion/career-accordion.c
   imports: [RouterLink, CareerAccordionComponent],
   templateUrl: './know-more.component.html',
   styleUrls: ['./know-more.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class KnowMoreComponent implements AfterViewInit {
   private checkPlatform = inject(CheckPlatformUtility);

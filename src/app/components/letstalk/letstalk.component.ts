@@ -1,4 +1,10 @@
-import { Component, computed, HostBinding, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  computed,
+  HostBinding,
+  inject,
+} from '@angular/core';
 import { Social } from '@app/models/interfaces';
 import { DarkmodeService } from '@app/services/darkmode.service';
 
@@ -8,6 +14,7 @@ import { DarkmodeService } from '@app/services/darkmode.service';
   imports: [],
   templateUrl: './letstalk.component.html',
   styleUrl: './letstalk.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LetstalkComponent {
   public darkMode = inject(DarkmodeService);

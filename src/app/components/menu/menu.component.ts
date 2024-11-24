@@ -1,5 +1,6 @@
 import {
   AfterViewInit,
+  ChangeDetectionStrategy,
   Component,
   computed,
   HostBinding,
@@ -14,6 +15,7 @@ import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
   imports: [],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MenuComponent implements AfterViewInit {
   private checkPlatform = inject(CheckPlatformUtility);

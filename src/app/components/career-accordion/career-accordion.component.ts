@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   computed,
   HostBinding,
@@ -15,6 +16,7 @@ import { DarkmodeService } from '@app/services/darkmode.service';
   imports: [],
   templateUrl: './career-accordion.component.html',
   styleUrl: './career-accordion.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CareerAccordionComponent {
   public darkMode = inject(DarkmodeService);

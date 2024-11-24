@@ -1,5 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component, computed, HostBinding, inject, input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  computed,
+  HostBinding,
+  inject,
+  input,
+} from '@angular/core';
 import { Blog } from '@app/models/interfaces';
 import { DarkmodeService } from '@app/services/darkmode.service';
 import { WrapperPostComponent } from '../wrapper-post/wrapper-post.component';
@@ -10,6 +17,7 @@ import { WrapperPostComponent } from '../wrapper-post/wrapper-post.component';
   imports: [CommonModule, WrapperPostComponent],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BlogComponent {
   public darkMode = inject(DarkmodeService);

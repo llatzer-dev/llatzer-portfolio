@@ -1,4 +1,11 @@
-import { Component, computed, HostBinding, inject, input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  computed,
+  HostBinding,
+  inject,
+  input,
+} from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { HighlightBlurDirective } from '@app/directives/highlight-blur.directive';
 import { DarkmodeService } from '@app/services/darkmode.service';
@@ -9,6 +16,7 @@ import { DarkmodeService } from '@app/services/darkmode.service';
   imports: [RouterLink, HighlightBlurDirective],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeroComponent {
   public darkMode = inject(DarkmodeService);

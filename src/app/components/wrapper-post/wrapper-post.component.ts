@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-wrapper-post',
@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
   imports: [CommonModule],
   templateUrl: './wrapper-post.component.html',
   styleUrl: './wrapper-post.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WrapperPostComponent {
   focused = false;

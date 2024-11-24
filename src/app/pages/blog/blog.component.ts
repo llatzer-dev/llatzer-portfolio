@@ -6,17 +6,19 @@ import {
   inject,
   Renderer2,
   OnInit,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { Blog } from '@app/models/interfaces';
 import { DarkmodeService } from '@app/services/darkmode.service';
 import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
 
 @Component({
-  selector: 'app-blog',
+  selector: 'app-blog-page',
   standalone: true,
   imports: [],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BlogComponent implements OnInit {
   private blogService = inject(BlogService);

@@ -1,4 +1,10 @@
-import { Component, computed, HostBinding, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  computed,
+  HostBinding,
+  inject,
+} from '@angular/core';
 import { BorderHighlightDirective } from '@app/directives/highlight-border.directive';
 import { Testimonial } from '@app/models/interfaces';
 import { DarkmodeService } from '@app/services/darkmode.service';
@@ -9,6 +15,7 @@ import { DarkmodeService } from '@app/services/darkmode.service';
   imports: [BorderHighlightDirective],
   templateUrl: './testimonials.component.html',
   styleUrl: './testimonials.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TestimonialsComponent {
   public darkMode = inject(DarkmodeService);

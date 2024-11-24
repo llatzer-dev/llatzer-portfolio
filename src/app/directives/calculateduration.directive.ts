@@ -2,6 +2,7 @@ import {
   Directive,
   ElementRef,
   input,
+  InputSignal,
   OnChanges,
   Renderer2,
   SimpleChanges,
@@ -12,8 +13,8 @@ import {
   selector: '[appCalculateDuration]',
 })
 export class CalculateDurationDirective implements OnChanges {
-  public startDate = input.required<Date>();
-  public endDate = input.required<Date>();
+  public startDate: InputSignal<Date> = input.required<Date>();
+  public endDate: InputSignal<Date> = input.required<Date>();
 
   constructor(
     private el: ElementRef,

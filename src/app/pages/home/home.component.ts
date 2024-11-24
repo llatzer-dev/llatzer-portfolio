@@ -1,4 +1,10 @@
-import { Component, inject, Renderer2, OnInit } from '@angular/core';
+import {
+  Component,
+  inject,
+  Renderer2,
+  OnInit,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { HeroComponent } from '../../components/hero/hero.component';
 import { KnowMoreComponent } from '../../components/know-more/know-more.component';
@@ -25,6 +31,7 @@ import { CheckPlatformUtility } from '@app/utils/check-platform.utility';
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent implements OnInit {
   private blogService = inject(BlogService);

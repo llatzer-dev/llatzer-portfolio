@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   computed,
   HostBinding,
@@ -13,6 +14,7 @@ import { DarkmodeService } from '@app/services/darkmode.service';
   imports: [],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent {
   public darkMode = inject(DarkmodeService);
